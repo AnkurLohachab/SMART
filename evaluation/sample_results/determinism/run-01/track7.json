@@ -1,0 +1,79 @@
+{
+  "n_attacks": 12,
+  "n_byte_identical_rounds": 12,
+  "all_match": true,
+  "consistency": [
+    {
+      "attack": "01_outsider_create_card",
+      "a_hash": "3dda3512726441844314cb80e80a26a6f1092482bd65610492d68ad89694bf35",
+      "b_hash": "3dda3512726441844314cb80e80a26a6f1092482bd65610492d68ad89694bf35",
+      "match": true
+    },
+    {
+      "attack": "02_reviewer_create_card",
+      "a_hash": "32da1392e454aed6fdf6aa77ed40634d590d10ba226336fbc8e3ce25af925a08",
+      "b_hash": "32da1392e454aed6fdf6aa77ed40634d590d10ba226336fbc8e3ce25af925a08",
+      "match": true
+    },
+    {
+      "attack": "03_publisher_validate",
+      "a_hash": "9e6ffad7ea0925a34964e8d80744946f94f67534818288d9cf978907a8768fac",
+      "b_hash": "9e6ffad7ea0925a34964e8d80744946f94f67534818288d9cf978907a8768fac",
+      "match": true
+    },
+    {
+      "attack": "04_outsider_reject",
+      "a_hash": "60a5552a1318128e1b79201767c6a6f583889961e1ced0e7517e6c9586bcb2ec",
+      "b_hash": "60a5552a1318128e1b79201767c6a6f583889961e1ced0e7517e6c9586bcb2ec",
+      "match": true
+    },
+    {
+      "attack": "05_outsider_publish",
+      "a_hash": "b8ad4b7c5fd38ab5a1755eebf054beceef3b26e18ce43f90105a60910025bfd1",
+      "b_hash": "b8ad4b7c5fd38ab5a1755eebf054beceef3b26e18ce43f90105a60910025bfd1",
+      "match": true
+    },
+    {
+      "attack": "06_reviewer_deprecate",
+      "a_hash": "9309699f0640c5a41a62c60ebfd5085c43ae68513b44ffcd722a6f3149982318",
+      "b_hash": "9309699f0640c5a41a62c60ebfd5085c43ae68513b44ffcd722a6f3149982318",
+      "match": true
+    },
+    {
+      "attack": "07_outsider_grantRole",
+      "a_hash": "2577daa822b4e0f3865fa398fbcbe700ca4bad69018f05c97514cae5fad0b47c",
+      "b_hash": "2577daa822b4e0f3865fa398fbcbe700ca4bad69018f05c97514cae5fad0b47c",
+      "match": true
+    },
+    {
+      "attack": "08_outsider_setIdentityReg",
+      "a_hash": "93cb295ad9f90de9546acc3c15756c93749a2bf695c4731b060d43843a357bf5",
+      "b_hash": "93cb295ad9f90de9546acc3c15756c93749a2bf695c4731b060d43843a357bf5",
+      "match": true
+    },
+    {
+      "attack": "09_outsider_setLineageRegs",
+      "a_hash": "93cb295ad9f90de9546acc3c15756c93749a2bf695c4731b060d43843a357bf5",
+      "b_hash": "93cb295ad9f90de9546acc3c15756c93749a2bf695c4731b060d43843a357bf5",
+      "match": true
+    },
+    {
+      "attack": "10_outsider_setChallengeWin",
+      "a_hash": "93cb295ad9f90de9546acc3c15756c93749a2bf695c4731b060d43843a357bf5",
+      "b_hash": "93cb295ad9f90de9546acc3c15756c93749a2bf695c4731b060d43843a357bf5",
+      "match": true
+    },
+    {
+      "attack": "11_outsider_setStrictMode",
+      "a_hash": "93cb295ad9f90de9546acc3c15756c93749a2bf695c4731b060d43843a357bf5",
+      "b_hash": "93cb295ad9f90de9546acc3c15756c93749a2bf695c4731b060d43843a357bf5",
+      "match": true
+    },
+    {
+      "attack": "12_outsider_emergencyPublish",
+      "a_hash": "93cb295ad9f90de9546acc3c15756c93749a2bf695c4731b060d43843a357bf5",
+      "b_hash": "93cb295ad9f90de9546acc3c15756c93749a2bf695c4731b060d43843a357bf5",
+      "match": true
+    }
+  ]
+}

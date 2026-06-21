@@ -1,0 +1,2 @@
+extractor_a,extractor_b,n_a,n_b,n_intersect,n_union,kappa
+openrouter[openai/gpt-oss-120b:free],regex-baseline-v2[Mandatory],341,172,129,384,-0.2288

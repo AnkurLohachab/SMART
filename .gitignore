@@ -1,0 +1,65 @@
+# Dependencies
+node_modules/
+venv/
+env/
+*.egg-info/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+# Contracts
+artifacts/
+cache/
+typechain-types/
+deployments-*.json
+# Environment
+.env
+.env.local
+.env.production
+*.env
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+# OS
+.DS_Store
+Thumbs.db
+# Logs
+logs/
+*.log
+npm-debug.log*
+# Data
+offchain/neo4j/data/
+offchain/neo4j/logs/
+offchain/minio/data/
+offchain/minio/config/
+# SSL
+ssl/
+*.key
+*.crt
+*.pem
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+# Coverage
+coverage/
+.coverage
+*.lcov
+# Misc
+*.bak
+*.tmp
+*.pyc
+outputs/
+extractions/.cache/
+*.jar
+*.db
+*.tex
+*.puml
+*.dot
+*.tsbuildinfo

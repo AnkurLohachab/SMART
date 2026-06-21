@@ -1,0 +1,76 @@
+{
+  "n_cells": 39,
+  "floor_median_gas": 26149,
+  "by_action": [
+    {
+      "action": "challenge",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 59715,
+      "ratio_over_floor": 2.283643733986003
+    },
+    {
+      "action": "create",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 558703,
+      "ratio_over_floor": 21.366132548089794
+    },
+    {
+      "action": "create_size",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 1317734,
+      "ratio_over_floor": 50.39328463803587
+    },
+    {
+      "action": "create_size",
+      "size_kb": 10,
+      "n": 3,
+      "median_gas": 7949877,
+      "ratio_over_floor": 304.02221882289956
+    },
+    {
+      "action": "deprecate",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 350114,
+      "ratio_over_floor": 13.389192703353856
+    },
+    {
+      "action": "publish",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 583707,
+      "ratio_over_floor": 22.322345022754217
+    },
+    {
+      "action": "request_revision",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 348285,
+      "ratio_over_floor": 13.319247389957551
+    },
+    {
+      "action": "revise",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 573838,
+      "ratio_over_floor": 21.94493097250373
+    },
+    {
+      "action": "submit",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 355240,
+      "ratio_over_floor": 13.5852231442885
+    },
+    {
+      "action": "validate",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 324446,
+      "ratio_over_floor": 12.40758728823282
+    }
+  ]
+}

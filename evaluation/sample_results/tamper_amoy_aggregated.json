@@ -1,0 +1,135 @@
+{
+  "track1_classical": {
+    "result_dir": "tamper-detection/run-02",
+    "chain_id": 80002,
+    "lifecycle": "0xEe74288FFa63f8D1296246555020DAaEd39D9f4d",
+    "bootstrap_token_id": 637,
+    "n_attacks": 3,
+    "n_prevented": 3,
+    "n_history_intact": 3,
+    "attacks": [
+      {
+        "attack_id": "T1",
+        "attack_name": "audit-trail deletion",
+        "attempt_prevented": true,
+        "history_intact": true,
+        "detail": "no admin mutator found (0 candidates); 4 records stable",
+        "tx_hashes": []
+      },
+      {
+        "attack_id": "T2",
+        "attack_name": "retroactive claim modification",
+        "attempt_prevented": true,
+        "history_intact": true,
+        "detail": "action.claimRef before=bd1f0b5983b1506f... after=bd1f0b5983b1506f...; live snapshot moved bd1f0b5983b1506f... \u2192 0000000000000000... (attack ran: True)",
+        "tx_hashes": [
+          "8b954217ca665a59c81e831ff33a4661174c085ddce601acc9984ed6f5f5d8cf",
+          "48cd67792b78a1ce4fb2e3c866fb82c0fd02ead56dff0562d358c8c4c231d3d4",
+          "0a4bef5237f3d8dffa3000ffc2c706c66b73b34564ee541561ef224582caa96b"
+        ]
+      },
+      {
+        "attack_id": "T3",
+        "attack_name": "forged deprecation",
+        "attempt_prevented": true,
+        "history_intact": true,
+        "detail": "reverted with 'execution reverted: AccessControl: account 0x7adeebcaa9d1ca984af70314c1d6ce5d53e5185c is missing rol'; 0 forged Deprecated logs emitted",
+        "tx_hashes": [
+          "ac2380a362652b8b2079ac4b43b5cafd9d69ec4b37cf94bb3fb408de3813ead1"
+        ]
+      }
+    ]
+  },
+  "testA_operator_adversary": {
+    "result_dir": "tamper-detection/run-04",
+    "chain_id": 80002,
+    "lifecycle": "0xEe74288FFa63f8D1296246555020DAaEd39D9f4d",
+    "sbt": "0xc02feb491f2519200e27D49A5B075F12a9d12FD1",
+    "n_attacks": 5,
+    "n_cryptographically_blocked": 4,
+    "n_forensically_detectable": 5,
+    "attacks": [
+      {
+        "attack_id": "A1",
+        "attack_name": "soulbound bypass via approve+transferFrom",
+        "attempt_prevented": true,
+        "forensically_detectable": true,
+        "detail": "approve tx ok=False; transferFrom reverted with 'execution reverted: SMARTLifecycle: Soulbound tokens cannot be transferred'",
+        "tx_hashes": [
+          "5cb5c39cb92622e97be68577553a71857c1a4264f07a1c755a0a1ce8507d5a14",
+          "9e2e4e8e8b8b0a25f23eecfe6af2d48c7e5ed8ebb299608a9629bd228aa6b245"
+        ]
+      },
+      {
+        "attack_id": "A2",
+        "attack_name": "soulbound bypass via setApprovalForAll",
+        "attempt_prevented": true,
+        "forensically_detectable": true,
+        "detail": "setApprovalForAll tx ok=False; transferFrom reverted with 'execution reverted: SMARTLifecycle: Soulbound tokens cannot be transferred'",
+        "tx_hashes": [
+          "f02233960b65d578e71f02af7f8923f30fbc3747b4cde1597bbad03e924581a7",
+          "f4c646688e16e65dad1c103979042e73458a496eef18ac9d1619c75bd792b262"
+        ]
+      },
+      {
+        "attack_id": "A3",
+        "attack_name": "direct SBT burn to erase",
+        "attempt_prevented": true,
+        "forensically_detectable": true,
+        "detail": "burn ok=False: 'execution reverted: SMARTModelCardSBT: token does not exist'; Lifecycle ActionRecords before=4 after=4 \u2014 history independent of SBT",
+        "tx_hashes": [
+          "7867bc1da5de35ceb926204593d4a49889440db63529d9f28f154d1e9d09ac7f"
+        ]
+      },
+      {
+        "attack_id": "A4",
+        "attack_name": "direct SBT mint bypassing lifecycle",
+        "attempt_prevented": true,
+        "forensically_detectable": true,
+        "detail": "deployer.hasRole(MINTER)=False; mint reverted=True: 'execution reverted: AccessControl: account 0x3cac9dd536810260ab5f0678e257a18a540'",
+        "tx_hashes": [
+          "d4ad80fc7a904a9c8b3cf3368edd922c4237d14f75df6fde74bad63d6746ed2d"
+        ]
+      },
+      {
+        "attack_id": "A5",
+        "attack_name": "privilege escalation trail",
+        "attempt_prevented": false,
+        "forensically_detectable": true,
+        "detail": "grant ok=True, forge ok=True, revoke ok=True; RoleGranted event in grant tx: True; RoleRevoked event in revoke tx: True; forgery succeeded but trail is publicly inspectable on PolygonScan.",
+        "tx_hashes": [
+          "b31e3968056dbb423d6ff3022b18c7ccba8bcc35fd14f237c4b698b713cc2425",
+          "d9eecd9c0c59c027df99bba0ee058f7a46beac66384fde5794a45b712f4ebf29",
+          "c556275bfa9867c5e885cdca590b499830b727d1334648dc0d543a933526eede"
+        ]
+      }
+    ]
+  },
+  "testB_independent_verify": {
+    "result_dir": "tamper-detection/run-05",
+    "chain_id": 80002,
+    "token_id": 637,
+    "n_actions": 4,
+    "n_distinct_actors": 3,
+    "fsm_chain_integrity": true,
+    "verification_method": "Read-only eth_call against public Amoy RPC. No SMART backend, API, or off-chain data source was consulted. Every value above is derived from the verified contract code at the listed addresses (Sourcify full-match)."
+  },
+  "testC_liveness": {
+    "result_dir": "tamper-detection/run-07",
+    "chain_id": 80002,
+    "new_token_id": 640,
+    "tx_hash": "0xcc6f1e6d8542d77a3eb17c118c658ea9d5d39815e344d0d83fb881f11bd6313b",
+    "tx_gas_used": 562177,
+    "wall_clock_seconds": 1.37,
+    "integrity_match": true,
+    "backend_reachable_at_test_time": true
+  },
+  "testD_bytecode_attest": {
+    "result_dir": "tamper-detection/run-08",
+    "n_contracts": 17,
+    "n_sourcify_full_match": 17,
+    "n_bytecode_match": 15,
+    "n_pass_both": 15,
+    "n_fail": 2
+  }
+}

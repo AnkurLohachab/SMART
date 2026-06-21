@@ -1,0 +1,41 @@
+{
+  "n_cells": 11,
+  "grand_mean_N": 193.9090909090909,
+  "total_variance": 4625.900826446281,
+  "explained_variance": 6727.690358126722,
+  "residual_variance": 0.0,
+  "components": {
+    "tier": {
+      "between_variance": 572.7493112947658,
+      "fraction_of_total": 0.12381357335210415,
+      "n_levels": 3,
+      "level_means": {
+        "M": 220,
+        "M+R": 169,
+        "M+R+P": 175.33333333333334
+      }
+    },
+    "vocab_variant": {
+      "between_variance": 1893.8887052341597,
+      "fraction_of_total": 0.4094097077063986,
+      "n_levels": 3,
+      "level_means": {
+        "curated": 237.8,
+        "truncated30": 134.33333333333334,
+        "overextended": 180.33333333333334
+      }
+    },
+    "extractor": {
+      "between_variance": 4261.052341597796,
+      "fraction_of_total": 0.9211292030381097,
+      "n_levels": 5,
+      "level_means": {
+        "regex-baseline-v2[Mandatory]": 147.33333333333334,
+        "regex-baseline-v2[Mandatory+Recommended]": 169,
+        "regex-baseline-v2[Mandatory+Recommended+Permitted]": 175.33333333333334,
+        "deepinfra[Qwen/Qwen2.5-72B-Instruct]": 307,
+        "deepinfra[meta-llama/Llama-3.3-70B-Instruct-Turbo]": 351
+      }
+    }
+  }
+}

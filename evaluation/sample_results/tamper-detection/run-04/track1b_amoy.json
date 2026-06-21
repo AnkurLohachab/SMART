@@ -1,0 +1,64 @@
+{
+  "chain_id": 80002,
+  "lifecycle": "0xEe74288FFa63f8D1296246555020DAaEd39D9f4d",
+  "sbt": "0xc02feb491f2519200e27D49A5B075F12a9d12FD1",
+  "deployer": "0x3caC9DD536810260ab5F0678e257a18A54074a66",
+  "target_lifecycle_token": 637,
+  "results": [
+    {
+      "attack_id": "A1",
+      "attack_name": "soulbound bypass via approve+transferFrom",
+      "attempt_prevented": true,
+      "forensically_detectable": true,
+      "detail": "approve tx ok=False; transferFrom reverted with 'execution reverted: SMARTLifecycle: Soulbound tokens cannot be transferred'",
+      "tx_hashes": [
+        "5cb5c39cb92622e97be68577553a71857c1a4264f07a1c755a0a1ce8507d5a14",
+        "9e2e4e8e8b8b0a25f23eecfe6af2d48c7e5ed8ebb299608a9629bd228aa6b245"
+      ]
+    },
+    {
+      "attack_id": "A2",
+      "attack_name": "soulbound bypass via setApprovalForAll",
+      "attempt_prevented": true,
+      "forensically_detectable": true,
+      "detail": "setApprovalForAll tx ok=False; transferFrom reverted with 'execution reverted: SMARTLifecycle: Soulbound tokens cannot be transferred'",
+      "tx_hashes": [
+        "f02233960b65d578e71f02af7f8923f30fbc3747b4cde1597bbad03e924581a7",
+        "f4c646688e16e65dad1c103979042e73458a496eef18ac9d1619c75bd792b262"
+      ]
+    },
+    {
+      "attack_id": "A3",
+      "attack_name": "direct SBT burn to erase",
+      "attempt_prevented": true,
+      "forensically_detectable": true,
+      "detail": "burn ok=False: 'execution reverted: SMARTModelCardSBT: token does not exist'; Lifecycle ActionRecords before=4 after=4 \u2014 history independent of SBT",
+      "tx_hashes": [
+        "7867bc1da5de35ceb926204593d4a49889440db63529d9f28f154d1e9d09ac7f"
+      ]
+    },
+    {
+      "attack_id": "A4",
+      "attack_name": "direct SBT mint bypassing lifecycle",
+      "attempt_prevented": true,
+      "forensically_detectable": true,
+      "detail": "deployer.hasRole(MINTER)=False; mint reverted=True: 'execution reverted: AccessControl: account 0x3cac9dd536810260ab5f0678e257a18a540'",
+      "tx_hashes": [
+        "d4ad80fc7a904a9c8b3cf3368edd922c4237d14f75df6fde74bad63d6746ed2d"
+      ]
+    },
+    {
+      "attack_id": "A5",
+      "attack_name": "privilege escalation trail",
+      "attempt_prevented": false,
+      "forensically_detectable": true,
+      "detail": "grant ok=True, forge ok=True, revoke ok=True; RoleGranted event in grant tx: True; RoleRevoked event in revoke tx: True; forgery succeeded but trail is publicly inspectable on PolygonScan.",
+      "tx_hashes": [
+        "b31e3968056dbb423d6ff3022b18c7ccba8bcc35fd14f237c4b698b713cc2425",
+        "d9eecd9c0c59c027df99bba0ee058f7a46beac66384fde5794a45b712f4ebf29",
+        "c556275bfa9867c5e885cdca590b499830b727d1334648dc0d543a933526eede"
+      ]
+    }
+  ],
+  "ran_at": 1778543069
+}

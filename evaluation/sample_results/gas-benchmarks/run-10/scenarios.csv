@@ -1,0 +1,18 @@
+scenario,step,op,tx_hash,note
+reject,submit,submitForEvaluation,0x1840c1aa54036a5ae72a426d020306870b0ab1e0c791f849632ca49c83db62bf,
+reject,reject,rejectModelCard,0x870fd7ccde30dbc540743dc62b71ff51ee01848138e703746bae21b06a361051,
+happy,create,createModelCard,0x9b40dfcfd32e0a05fe870767bfd7b0b9426bb661317914233b6f224e7c138d7b,
+happy,submit,submitForEvaluation,0x719b91921b936839edd48262ea50ca782048d2bc671411cc3c72f40b8eca9982,
+happy,validate,validateModelCard,0x4900df9a9456d7f9d8e5a5251d895aa84d3c1e6183f92b11f2ca90818644b474,
+happy,publish,publishModelCard,0x669d70c944cb62c73ae43d0a55b97a8b33d6c97c971e2c643126a7ad8f0a93da,
+happy,deprecate,deprecateModelCard,0x8bb6c4074b78b29b5db96ca6ed7afcf0956863418d24e906b57c55e11dd64950,
+revise,submit,submitForEvaluation,0xcc1c2549e0dc0976f40f7bb8961fab7772b83451330ff3c04295ad4054be44a9,
+revise,request-revision,requestRevision,0x9ba257c941b6cc9ce4c9420b130ba963c6419798127157bcd016e601c4480b55,
+challenge,submit,submitForEvaluation,0xe5c320710a5d3c0f862964572108ed2dbee9a5b8467d0ac49eb75b858b8b7e45,
+challenge,validate,validateModelCard,0x4819c3e4ad6d946faa61bc22a45a4f273c4e398af76c9bb4520745b71fed57c1,
+challenge,challenge,challengeAction,,"err: POST /api/actions/35/challenge -> 400: {""detail"":""Unknown repudiation reason: EvidenceMissing""}"
+challenge,resolve,resolveDispute,,"err: POST /api/actions/35/resolve -> 401: {""detail"":""Missing authentication token""}"
+challenge,submit,submitForEvaluation,0x1c639ac971f581208faa6e4dec3e461d44efc9ba6cc0ceeedce9e1dd1d0e010b,
+challenge,validate,validateModelCard,0xbf8c1c47ba995162f7371ccb36372c8ebc606c5dcce0069082c9e7a06c3fdb67,
+challenge,challenge,challengeAction,,"err: POST /api/actions/37/challenge -> 400: {""detail"":""Unknown repudiation reason: EvidenceMissing""}"
+challenge,resolve,resolveDispute,,"err: POST /api/actions/37/resolve -> 401: {""detail"":""Missing authentication token""}"

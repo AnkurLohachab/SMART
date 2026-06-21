@@ -1,0 +1,13 @@
+{
+  "iter": 1,
+  "pass": true,
+  "issues": [],
+  "fixes": [],
+  "thresholds": {
+    "N_MIN": 30,
+    "N_MAX": 400,
+    "NEG_CONTROL_MAX": 0,
+    "LLM_MIN_OBLIGATIONS": 10,
+    "MIN_DOCS_WITH_EXTRACTIONS": 4
+  }
+}

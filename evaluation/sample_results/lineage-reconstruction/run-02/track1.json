@@ -1,0 +1,61 @@
+{
+  "smart": [
+    {
+      "attack_id": "T1",
+      "attack_name": "audit-trail deletion",
+      "system": "SMART",
+      "attempt_prevented": "True",
+      "history_intact": "True",
+      "detail": "no admin mutator found (0 candidates); 4 records stable"
+    },
+    {
+      "attack_id": "T2",
+      "attack_name": "retroactive claim modification",
+      "system": "SMART",
+      "attempt_prevented": "True",
+      "history_intact": "True",
+      "detail": "action.claimRef before=e86af6fa3c6e1d5e... after=e86af6fa3c6e1d5e... ; live snapshot moved e86af6fa3c6e1d5e... -> ad94cf8483a791e6..."
+    },
+    {
+      "attack_id": "T3",
+      "attack_name": "forged deprecation",
+      "system": "SMART",
+      "attempt_prevented": "True",
+      "history_intact": "True",
+      "detail": "reverted with {'code': -32603, 'message': \"Error: VM Exception while processing transaction: r; no Deprecated logs emitted"
+    }
+  ],
+  "baseline": [
+    {
+      "attack_id": "T1",
+      "attack_name": "audit-trail deletion",
+      "system": "centralised_baseline",
+      "attempt_prevented": "False",
+      "history_intact": "False",
+      "detail": "admin DELETE removed 3 \u2192 0 rows"
+    },
+    {
+      "attack_id": "T2",
+      "attack_name": "retroactive claim modification",
+      "system": "centralised_baseline",
+      "attempt_prevented": "False",
+      "history_intact": "False",
+      "detail": "row id=4 after_json overwritten"
+    },
+    {
+      "attack_id": "T3",
+      "attack_name": "forged deprecation",
+      "system": "centralised_baseline",
+      "attempt_prevented": "False",
+      "history_intact": "False",
+      "detail": "injected 1 forged Deprecated row(s)"
+    }
+  ],
+  "summary": {
+    "n_attacks": 3,
+    "smart_prevented": 3,
+    "baseline_prevented": 0,
+    "smart_history_intact": 3,
+    "baseline_history_intact": 0
+  }
+}

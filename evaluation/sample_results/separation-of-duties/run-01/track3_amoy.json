@@ -1,0 +1,142 @@
+{
+  "chain_id": 80002,
+  "router": "0xEe74288FFa63f8D1296246555020DAaEd39D9f4d",
+  "ranAt": 1778093009,
+  "expected_revert_substring": "is missing role",
+  "n_pass": 12,
+  "n_fail": 0,
+  "rows": [
+    {
+      "attack": "01_outsider_create_card",
+      "fn": "createModelCard",
+      "attacker": "outsider",
+      "attacker_eoa": "0xa0Ee7A142d267C1f36714E4a8F75612F20a79720",
+      "role_guard": "DEVELOPER_ROLE",
+      "tx_ok": false,
+      "revert_reason": "execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a8f75612f20a79720 is missing role 0x4504b9dfd7400a1522f49a8b4a100552da9236849581fd59b7363eb48c6a474c | execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a",
+      "verdict": "PASS",
+      "note": ""
+    },
+    {
+      "attack": "02_reviewer_create_card",
+      "fn": "createModelCard",
+      "attacker": "rev_a",
+      "attacker_eoa": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "role_guard": "DEVELOPER_ROLE",
+      "tx_ok": false,
+      "revert_reason": "execution reverted: AccessControl: account 0x90f79bf6eb2c4f870365e785982e1f101e93b906 is missing role 0x4504b9dfd7400a1522f49a8b4a100552da9236849581fd59b7363eb48c6a474c | execution reverted: AccessControl: account 0x90f79bf6eb2c4f870365e785",
+      "verdict": "PASS",
+      "note": ""
+    },
+    {
+      "attack": "03_publisher_validate",
+      "fn": "validateModelCard",
+      "attacker": "pub_a",
+      "attacker_eoa": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+      "role_guard": "AUTHENTICATOR_ROLE",
+      "tx_ok": false,
+      "revert_reason": "execution reverted: AccessControl: account 0x976ea74026e726554db657fa54763abd0c3a0aa9 is missing role 0x190acb99f29d9641c9ad47655049f2d7c78fcbc837d62e7981d28c871f722081 | execution reverted: AccessControl: account 0x976ea74026e726554db657fa",
+      "verdict": "PASS",
+      "note": ""
+    },
+    {
+      "attack": "04_outsider_reject",
+      "fn": "rejectModelCard",
+      "attacker": "outsider",
+      "attacker_eoa": "0xa0Ee7A142d267C1f36714E4a8F75612F20a79720",
+      "role_guard": "AUTHENTICATOR_ROLE",
+      "tx_ok": false,
+      "revert_reason": "execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a8f75612f20a79720 is missing role 0x190acb99f29d9641c9ad47655049f2d7c78fcbc837d62e7981d28c871f722081 | execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a",
+      "verdict": "PASS",
+      "note": ""
+    },
+    {
+      "attack": "05_outsider_publish",
+      "fn": "publishModelCard",
+      "attacker": "outsider",
+      "attacker_eoa": "0xa0Ee7A142d267C1f36714E4a8F75612F20a79720",
+      "role_guard": "PUBLISHER_ROLE",
+      "tx_ok": false,
+      "revert_reason": "execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a8f75612f20a79720 is missing role 0x0ac90c257048ef1c3e387c26d4a99bde06894efbcbff862dc1885c3a9319308a | execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a",
+      "verdict": "PASS",
+      "note": ""
+    },
+    {
+      "attack": "06_reviewer_deprecate",
+      "fn": "deprecateModelCard",
+      "attacker": "rev_b",
+      "attacker_eoa": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+      "role_guard": "PUBLISHER_ROLE",
+      "tx_ok": false,
+      "revert_reason": "execution reverted: AccessControl: account 0x15d34aaf54267db7d7c367839aaf71a00a2c6a65 is missing role 0x0ac90c257048ef1c3e387c26d4a99bde06894efbcbff862dc1885c3a9319308a | execution reverted: AccessControl: account 0x15d34aaf54267db7d7c36783",
+      "verdict": "PASS",
+      "note": ""
+    },
+    {
+      "attack": "07_outsider_grantRole",
+      "fn": "grantRole",
+      "attacker": "outsider",
+      "attacker_eoa": "0xa0Ee7A142d267C1f36714E4a8F75612F20a79720",
+      "role_guard": "DEFAULT_ADMIN_ROLE",
+      "tx_ok": false,
+      "revert_reason": "execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a8f75612f20a79720 is missing role 0x0000000000000000000000000000000000000000000000000000000000000000 | execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a",
+      "verdict": "PASS",
+      "note": ""
+    },
+    {
+      "attack": "08_outsider_setIdentityReg",
+      "fn": "setIdentityRegistry",
+      "attacker": "outsider",
+      "attacker_eoa": "0xa0Ee7A142d267C1f36714E4a8F75612F20a79720",
+      "role_guard": "DEFAULT_ADMIN_ROLE",
+      "tx_ok": false,
+      "revert_reason": "execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a8f75612f20a79720 is missing role 0xa49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775 | execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a",
+      "verdict": "PASS",
+      "note": ""
+    },
+    {
+      "attack": "09_outsider_setLineageRegs",
+      "fn": "setLineageRegistries",
+      "attacker": "outsider",
+      "attacker_eoa": "0xa0Ee7A142d267C1f36714E4a8F75612F20a79720",
+      "role_guard": "DEFAULT_ADMIN_ROLE",
+      "tx_ok": false,
+      "revert_reason": "execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a8f75612f20a79720 is missing role 0xa49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775 | execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a",
+      "verdict": "PASS",
+      "note": ""
+    },
+    {
+      "attack": "10_outsider_setChallengeWin",
+      "fn": "setChallengeWindowSeconds",
+      "attacker": "outsider",
+      "attacker_eoa": "0xa0Ee7A142d267C1f36714E4a8F75612F20a79720",
+      "role_guard": "DEFAULT_ADMIN_ROLE",
+      "tx_ok": false,
+      "revert_reason": "execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a8f75612f20a79720 is missing role 0xa49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775 | execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a",
+      "verdict": "PASS",
+      "note": ""
+    },
+    {
+      "attack": "11_outsider_setStrictMode",
+      "fn": "setStrictMode",
+      "attacker": "outsider",
+      "attacker_eoa": "0xa0Ee7A142d267C1f36714E4a8F75612F20a79720",
+      "role_guard": "ADMIN_ROLE",
+      "tx_ok": false,
+      "revert_reason": "execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a8f75612f20a79720 is missing role 0xa49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775 | execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a",
+      "verdict": "PASS",
+      "note": ""
+    },
+    {
+      "attack": "12_outsider_emergencyPublish",
+      "fn": "adminEmergencyPublish",
+      "attacker": "outsider",
+      "attacker_eoa": "0xa0Ee7A142d267C1f36714E4a8F75612F20a79720",
+      "role_guard": "ADMIN_ROLE",
+      "tx_ok": false,
+      "revert_reason": "execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a8f75612f20a79720 is missing role 0xa49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775 | execution reverted: AccessControl: account 0xa0ee7a142d267c1f36714e4a",
+      "verdict": "PASS",
+      "note": ""
+    }
+  ]
+}

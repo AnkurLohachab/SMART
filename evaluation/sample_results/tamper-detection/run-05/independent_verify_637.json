@@ -1,0 +1,157 @@
+{
+  "verification_at": 1778543185,
+  "rpc_url": "https://rpc-amoy.polygon.technology",
+  "chain_id": 80002,
+  "lifecycle_contract": "0xEe74288FFa63f8D1296246555020DAaEd39D9f4d",
+  "identity_registry": "0xd8B65DD93124154ECCF1eE19E539089B28b9eEBa",
+  "sbt_contract": "0xc02feb491f2519200e27D49A5B075F12a9d12FD1",
+  "token_id": 637,
+  "card": {
+    "owner": "0x194A23a655BE3faF3f98d3050f3574fc204F1bb4",
+    "metadataURI": "ipfs://amoy-track1/1778542425",
+    "contentHash": "0xedb6b854df4988359898855b31f2498024280df61bc321a524e7202f0d45ed2a",
+    "version": 0,
+    "current_state_name": "Published"
+  },
+  "history": [
+    {
+      "action_id": 1369,
+      "actor": "0x194A23a655BE3faF3f98d3050f3574fc204F1bb4",
+      "from_state": 0,
+      "from_state_name": "Created",
+      "to_state": 0,
+      "to_state_name": "Created",
+      "transition_type": 0,
+      "transition_name": "Create",
+      "contentHash_at_action": "0xedb6b854df4988359898855b31f2498024280df61bc321a524e7202f0d45ed2a",
+      "claimRef_snapshot": "0x26b94355831852d0d3403903bdde4220378be43983cc5c778ffdffc2cab6c417",
+      "timestamp": 1778542432,
+      "block_number": 38207882,
+      "block_iso": "2026-05-11T23:33:52Z"
+    },
+    {
+      "action_id": 1374,
+      "actor": "0x194A23a655BE3faF3f98d3050f3574fc204F1bb4",
+      "from_state": 0,
+      "from_state_name": "Created",
+      "to_state": 1,
+      "to_state_name": "Submitted",
+      "transition_type": 1,
+      "transition_name": "Submit",
+      "contentHash_at_action": "0xedb6b854df4988359898855b31f2498024280df61bc321a524e7202f0d45ed2a",
+      "claimRef_snapshot": "0xc194c5754c27f9562c045fe27e62be9ee2d26987116eb0fe6e4c429127c0f480",
+      "timestamp": 1778542584,
+      "block_number": 38207983,
+      "block_iso": "2026-05-11T23:36:24Z"
+    },
+    {
+      "action_id": 1375,
+      "actor": "0x7ADeebcaa9D1cA984Af70314C1d6ce5D53E5185C",
+      "from_state": 1,
+      "from_state_name": "Submitted",
+      "to_state": 2,
+      "to_state_name": "Validated",
+      "transition_type": 2,
+      "transition_name": "Validate",
+      "contentHash_at_action": "0xedb6b854df4988359898855b31f2498024280df61bc321a524e7202f0d45ed2a",
+      "claimRef_snapshot": "0xbd1f0b5983b1506fd676fc18e5698a1c4b639adaae34c09d96f5c048ca980980",
+      "timestamp": 1778542585,
+      "block_number": 38207984,
+      "block_iso": "2026-05-11T23:36:25Z"
+    },
+    {
+      "action_id": 1376,
+      "actor": "0xfb96edFCb60DFcE16E1bBcd9DA2A9C824D8Fafaf",
+      "from_state": 2,
+      "from_state_name": "Validated",
+      "to_state": 6,
+      "to_state_name": "Published",
+      "transition_type": 6,
+      "transition_name": "Publish",
+      "contentHash_at_action": "0xedb6b854df4988359898855b31f2498024280df61bc321a524e7202f0d45ed2a",
+      "claimRef_snapshot": "0xef4b83afa9f7c2590dd63b3576fc358e92810afe03cc1754ec67e9d8016e2eb5",
+      "timestamp": 1778542587,
+      "block_number": 38207985,
+      "block_iso": "2026-05-11T23:36:27Z"
+    }
+  ],
+  "actor_claims": {
+    "0x194A23a655BE3faF3f98d3050f3574fc204F1bb4": [
+      {
+        "claim_type": 1,
+        "claim_type_name": "AI_Developer",
+        "current_snapshot_claim_id": "0xc194c5754c27f9562c045fe27e62be9ee2d26987116eb0fe6e4c429127c0f480",
+        "current_issuer": "0x0000000000000000000000003cac9dd536810260ab5f0678e257a18a54074a66",
+        "claim_timestamp": "0x000000000000000000000000194a23a655be3faf3f98d3050f3574fc204f1bb4"
+      },
+      {
+        "claim_type": 2,
+        "claim_type_name": "Authenticator",
+        "current_snapshot_claim_id": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "current_issuer": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "claim_timestamp": "0x000000000000000000000000194a23a655be3faf3f98d3050f3574fc204f1bb4"
+      },
+      {
+        "claim_type": 3,
+        "claim_type_name": "Publisher",
+        "current_snapshot_claim_id": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "current_issuer": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "claim_timestamp": "0x000000000000000000000000194a23a655be3faf3f98d3050f3574fc204f1bb4"
+      }
+    ],
+    "0x7ADeebcaa9D1cA984Af70314C1d6ce5D53E5185C": [
+      {
+        "claim_type": 1,
+        "claim_type_name": "AI_Developer",
+        "current_snapshot_claim_id": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "current_issuer": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "claim_timestamp": "0x0000000000000000000000007adeebcaa9d1ca984af70314c1d6ce5d53e5185c"
+      },
+      {
+        "claim_type": 2,
+        "claim_type_name": "Authenticator",
+        "current_snapshot_claim_id": "0xe2d92da88fa445f66506a4d406623278bec71200ebe8dab576b4fbab2febeb07",
+        "current_issuer": "0x0000000000000000000000003cac9dd536810260ab5f0678e257a18a54074a66",
+        "claim_timestamp": "0x0000000000000000000000007adeebcaa9d1ca984af70314c1d6ce5d53e5185c"
+      },
+      {
+        "claim_type": 3,
+        "claim_type_name": "Publisher",
+        "current_snapshot_claim_id": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "current_issuer": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "claim_timestamp": "0x0000000000000000000000007adeebcaa9d1ca984af70314c1d6ce5d53e5185c"
+      }
+    ],
+    "0xfb96edFCb60DFcE16E1bBcd9DA2A9C824D8Fafaf": [
+      {
+        "claim_type": 1,
+        "claim_type_name": "AI_Developer",
+        "current_snapshot_claim_id": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "current_issuer": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "claim_timestamp": "0x000000000000000000000000fb96edfcb60dfce16e1bbcd9da2a9c824d8fafaf"
+      },
+      {
+        "claim_type": 2,
+        "claim_type_name": "Authenticator",
+        "current_snapshot_claim_id": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "current_issuer": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "claim_timestamp": "0x000000000000000000000000fb96edfcb60dfce16e1bbcd9da2a9c824d8fafaf"
+      },
+      {
+        "claim_type": 3,
+        "claim_type_name": "Publisher",
+        "current_snapshot_claim_id": "0xef4b83afa9f7c2590dd63b3576fc358e92810afe03cc1754ec67e9d8016e2eb5",
+        "current_issuer": "0x0000000000000000000000003cac9dd536810260ab5f0678e257a18a54074a66",
+        "claim_timestamp": "0x000000000000000000000000fb96edfcb60dfce16e1bbcd9da2a9c824d8fafaf"
+      }
+    ]
+  },
+  "sbt": {
+    "sbt_token_id": 3,
+    "exists": false,
+    "error": "execution reverted: ERC721: invalid token ID"
+  },
+  "fsm_chain_integrity": true,
+  "fsm_breaks": [],
+  "verification_method": "Read-only eth_call against public Amoy RPC. No SMART backend, API, or off-chain data source was consulted. Every value above is derived from the verified contract code at the listed addresses (Sourcify full-match)."
+}

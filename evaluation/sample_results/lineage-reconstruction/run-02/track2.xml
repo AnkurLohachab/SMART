@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="8.186" timestamp="2026-05-05T22:34:22.358943+00:00" hostname="c817e341ccba"><testcase classname="track2_reconstruction.test_reconstruction" name="test_track2_reconstruct_each_trace" time="7.824" /></testsuite></testsuites>

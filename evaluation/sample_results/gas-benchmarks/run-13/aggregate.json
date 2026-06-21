@@ -1,0 +1,158 @@
+{
+  "ranAt": 1778098224,
+  "rpc": "https://polygon-amoy.infura.io/v3/REDACTED",
+  "api": "http://localhost:8001",
+  "start_block": 37914769,
+  "end_block": 37914950,
+  "n_tx_total": 95,
+  "n_tx_ok": 48,
+  "n_tx_revert": 47,
+  "per_op_success": [
+    {
+      "op": "createModelCard",
+      "n": 6,
+      "mean": 581826,
+      "median": 581826.0,
+      "stdev": 6.0,
+      "min": 581820,
+      "max": 581832
+    },
+    {
+      "op": "publishModelCard",
+      "n": 2,
+      "mean": 767178,
+      "median": 767178.0,
+      "stdev": 17106.0,
+      "min": 750072,
+      "max": 784284
+    },
+    {
+      "op": "rejectModelCard",
+      "n": 1,
+      "mean": 349459,
+      "median": 349459,
+      "stdev": 0,
+      "min": 349459,
+      "max": 349459
+    },
+    {
+      "op": "requestRevision",
+      "n": 2,
+      "mean": 380879,
+      "median": 380879.0,
+      "stdev": 8556.0,
+      "min": 372323,
+      "max": 389435
+    },
+    {
+      "op": "reviseModelCard",
+      "n": 2,
+      "mean": 780844,
+      "median": 780844.0,
+      "stdev": 6.0,
+      "min": 780838,
+      "max": 780850
+    },
+    {
+      "op": "submitForEvaluation",
+      "n": 5,
+      "mean": 310378.6,
+      "median": 310381,
+      "stdev": 4.8,
+      "min": 310369,
+      "max": 310381
+    },
+    {
+      "op": "unknown",
+      "n": 28,
+      "mean": 706546.25,
+      "median": 581832.0,
+      "stdev": 257460.65212136577,
+      "min": 356197,
+      "max": 1107232
+    },
+    {
+      "op": "validateModelCard",
+      "n": 2,
+      "mean": 278999,
+      "median": 278999.0,
+      "stdev": 0.0,
+      "min": 278999,
+      "max": 278999
+    }
+  ],
+  "per_op_revert": [
+    {
+      "op": "deprecateModelCard",
+      "n": 6,
+      "mean": 48726.666666666664,
+      "median": 52827.0,
+      "stdev": 13302.680440004897,
+      "min": 31970,
+      "max": 69933
+    },
+    {
+      "op": "publishModelCard",
+      "n": 4,
+      "mean": 54539,
+      "median": 50267.0,
+      "stdev": 7406.25087341767,
+      "min": 50255,
+      "max": 67367
+    },
+    {
+      "op": "rejectModelCard",
+      "n": 4,
+      "mean": 56943,
+      "median": 52668.0,
+      "stdev": 7407.98292384641,
+      "min": 52662,
+      "max": 69774
+    },
+    {
+      "op": "requestRevision",
+      "n": 4,
+      "mean": 66112,
+      "median": 70387.0,
+      "stdev": 7404.51720235695,
+      "min": 53287,
+      "max": 70387
+    },
+    {
+      "op": "reviseModelCard",
+      "n": 4,
+      "mean": 56045,
+      "median": 56048.0,
+      "stdev": 5.196152422706632,
+      "min": 56036,
+      "max": 56048
+    },
+    {
+      "op": "submitForEvaluation",
+      "n": 15,
+      "mean": 30396,
+      "median": 30400,
+      "stdev": 7.155417527999327,
+      "min": 30376,
+      "max": 30400
+    },
+    {
+      "op": "unknown",
+      "n": 3,
+      "mean": 32467,
+      "median": 32467,
+      "stdev": 0.0,
+      "min": 32467,
+      "max": 32467
+    },
+    {
+      "op": "validateModelCard",
+      "n": 7,
+      "mean": 52996.71428571428,
+      "median": 50559,
+      "stdev": 5980.95639065683,
+      "min": 50547,
+      "max": 67647
+    }
+  ]
+}

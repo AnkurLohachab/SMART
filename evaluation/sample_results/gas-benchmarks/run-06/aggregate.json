@@ -1,0 +1,19 @@
+{
+  "ranAt": 1778096368,
+  "rpc": "https://rpc-amoy.polygon.technology",
+  "api": "http://localhost:8001",
+  "start_block": 37913697,
+  "end_block": 37913713,
+  "n_tx_total": 8,
+  "per_op": [
+    {
+      "op": "unknown",
+      "n": 8,
+      "mean": 913051.75,
+      "median": 1090120.0,
+      "stdev": 321589.07866279833,
+      "min": 356185,
+      "max": 1107232
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+slot,phrase,canonical
+bearer,provider,Provider
+bearer,providers,Provider
+bearer,provider of a high-risk ai system,Provider
+bearer,providers of high-risk ai systems,Provider
+bearer,provider of high-risk ai,Provider
+bearer,manufacturer,Manufacturer
+bearer,manufacturers,Manufacturer
+bearer,deployer,Deployer
+bearer,deployers,Deployer
+bearer,user of a high-risk ai system,Deployer
+bearer,authorised representative,Authorised_Representative
+bearer,authorized representative,Authorised_Representative
+bearer,importer,Importer
+bearer,importers,Importer
+bearer,distributor,Distributor
+bearer,distributors,Distributor
+bearer,notified body,Notified_Body
+bearer,notified bodies,Notified_Body
+bearer,competent authority,Authority
+bearer,competent authorities,Authority
+bearer,market surveillance authority,Authority
+bearer,market surveillance,Authority
+bearer,regulator,Authority
+bearer,regulatory authority,Authority
+bearer,fda,Authority
+bearer,authority,Authority
+bearer,commission,Authority
+bearer,the commission,Authority
+bearer,european commission,Authority
+bearer,member state,Authority
+bearer,member states,Authority
+bearer,the member state,Authority
+bearer,the member states,Authority
+bearer,ai office,Authority
+bearer,the ai office,Authority
+bearer,ai board,Authority
+bearer,the board,Authority
+bearer,joint assessment team,Authority
+bearer,notifying authority,Authority
+bearer,notifying authorities,Authority
+bearer,mdcg,Authority
+bearer,medical device coordination group,Authority
+bearer,developer,Developer
+bearer,developers,Developer
+bearer,model developer,Developer
+bearer,sponsor,Sponsor
+bearer,sponsors,Sponsor
+bearer,applicant,Sponsor
+bearer,operator,Operator
+bearer,economic operator,Operator
+bearer,economic operators,Operator
+bearer,reviewer,Reviewer
+bearer,reviewers,Reviewer
+bearer,independent reviewer,Reviewer
+predicate,draw up,Produce
+predicate,drawn up,Produce
+predicate,produce,Produce
+predicate,produced,Produce
+predicate,prepare,Produce
+predicate,prepared,Produce
+predicate,establish,Produce
+predicate,established,Produce
+predicate,create,Produce
+predicate,document,Produce
+predicate,issue,Produce
+predicate,issued,Produce
+predicate,maintain,Maintain
+predicate,maintained,Maintain
+predicate,keep up-to-date,Maintain
+predicate,keep up to date,Maintain
+predicate,update,Maintain
+predicate,kept up to date,Maintain
+predicate,disclose,Disclose
+predicate,disclosed,Disclose
+predicate,make available,Disclose
+predicate,made available,Disclose
+predicate,provide,Disclose
+predicate,provided,Disclose
+predicate,share,Disclose
+predicate,grant access,Disclose
+predicate,monitor,Monitor
+predicate,monitored,Monitor
+predicate,observe,Monitor
+predicate,track,Monitor
+predicate,carry out post-market monitoring,Monitor
+predicate,inspect,Monitor
+predicate,report,Report
+predicate,reported,Report
+predicate,notify,Report
+predicate,inform,Report
+predicate,submit,Report
+predicate,submit a report,Report
+predicate,submitted,Report
+predicate,assess,Assess
+predicate,assessed,Assess
+predicate,evaluate,Assess
+predicate,evaluated,Assess
+predicate,test,Assess
+predicate,perform a conformity assessment,Assess
+predicate,record,RecordChange
+predicate,recorded,RecordChange
+predicate,log,RecordChange
+predicate,version,RecordChange
+predicate,track changes,RecordChange
+predicate,specify,RestrictUse
+predicate,specified,RestrictUse
+predicate,define intended use,RestrictUse
+predicate,approve,Approve
+predicate,approved,Approve
+predicate,sign off,Approve
+predicate,certify,Approve
+predicate,verify,Verify
+predicate,verified,Verify
+predicate,validate,Verify
+predicate,validated,Verify
+predicate,audit,Verify
+predicate,retain,Retain
+predicate,retained,Retain
+predicate,store,Retain
+predicate,preserve,Retain
+predicate,translate,Translate
+predicate,translated,Translate
+predicate,provide in a language,Translate
+artefact,technical documentation,TechnicalDocumentation
+artefact,documentation,TechnicalDocumentation
+artefact,risk management system,RiskManagementSystem
+artefact,risk management,RiskManagementSystem
+artefact,data governance,DataGovernancePolicy
+artefact,training data,TrainingDataDescription
+artefact,training datasets,TrainingDataDescription
+artefact,training validation and testing data sets,DataGovernancePolicy
+artefact,validation data,ValidationDataDescription
+artefact,test data,ValidationDataDescription
+artefact,performance,PerformanceMetrics
+artefact,performance metrics,PerformanceMetrics
+artefact,accuracy,PerformanceMetrics
+artefact,subgroup performance,SubgroupPerformance
+artefact,fairness,SubgroupPerformance
+artefact,bias,SubgroupPerformance
+artefact,limitations,LimitationsStatement
+artefact,intended use,IntendedUse
+artefact,intended purpose,IntendedUse
+artefact,benefit-risk,BenefitRiskAssessment
+artefact,benefit–risk,BenefitRiskAssessment
+artefact,benefit risk,BenefitRiskAssessment
+artefact,post-market surveillance,PostMarketSurveillancePlan
+artefact,post-market surveillance plan,PostMarketSurveillancePlan
+artefact,post-market monitoring,PostMarketMonitoringReport
+artefact,post-market monitoring system,PostMarketMonitoringReport
+artefact,psur,PostMarketMonitoringReport
+artefact,periodic safety update report,PostMarketMonitoringReport
+artefact,annual report,PostMarketMonitoringReport
+artefact,serious incident,SeriousIncidentReport
+artefact,information,TransparencyInformation
+artefact,instructions for use,TransparencyInformation
+artefact,human oversight,HumanOversightProvisions
+artefact,cybersecurity,CybersecurityProvisions
+artefact,cyber-security,CybersecurityProvisions
+artefact,change control,ChangeControlPlan
+artefact,predetermined change control,ChangeControlPlan
+artefact,pccp,ChangeControlPlan
+artefact,version,VersionLog
+artefact,version history,VersionLog
+artefact,conformity assessment,ConformityAssessment
+artefact,declaration of conformity,DeclarationOfConformity
+artefact,udi,DeviceIdentifier
+artefact,udi-di,DeviceIdentifier
+artefact,gmdn,DeviceIdentifier
+artefact,training protocol,TrainingProtocol
+artefact,test protocol,TestProtocol
+artefact,trustworthiness,TrustworthinessAssessment
+artefact,access control,AccessControlPolicy
+artefact,audit trail,AuditTrail
+artefact,role,RoleAssignment
+artefact,roles,RoleAssignment
+artefact,language,LanguageLocalisation
+artefact,decision,DecisionRecord
+artefact,its decision,DecisionRecord
+artefact,inspection report,InvestigationReport
+artefact,final report,InvestigationReport
+artefact,findings,InvestigationReport
+artefact,investigation,InvestigationReport
+artefact,electronic system,ElectronicSubmission
+artefact,electronic submission,ElectronicSubmission
+artefact,electronic notification,ElectronicSubmission
+artefact,single point of contact,ContactInformation
+artefact,identity of the single point of contact,ContactInformation
+artefact,sample of the device,DeviceSamples
+artefact,samples of the device,DeviceSamples
+artefact,free samples,DeviceSamples
+artefact,physical samples,DeviceSamples
+artefact,changes,ChangeNotification
+artefact,relevant changes,ChangeNotification
+artefact,intended changes,ChangeNotification
+artefact,modifications,ChangeNotification
+artefact,corrective action,CorrectiveAction
+artefact,national measure,CorrectiveAction
+artefact,measure,CorrectiveAction
+artefact,artificially generated,GeneratedContentDisclosure
+artefact,artificially generated or manipulated,GeneratedContentDisclosure
+artefact,deep fake,GeneratedContentDisclosure
+artefact,registration,Registration
+artefact,registered in the electronic system,Registration
+artefact,sandbox,RegulatorySandbox
+artefact,controlled environment,RegulatorySandbox
+artefact,template,TemplateForm
+artefact,filled-out template,TemplateForm
+artefact,sample additional,QualityAssuranceSampling
+artefact,documents necessary for the risk assessment,RiskManagementSystem
+artefact,mandate,Mandate
+artefact,a copy of the mandate,Mandate
+artefact,proof of activities,SandboxOutcome
+artefact,written proof,SandboxOutcome

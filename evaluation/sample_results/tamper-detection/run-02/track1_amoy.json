@@ -1,0 +1,65 @@
+{
+  "chain_id": 80002,
+  "lifecycle": "0xEe74288FFa63f8D1296246555020DAaEd39D9f4d",
+  "identity_registry": "0xd8B65DD93124154ECCF1eE19E539089B28b9eEBa",
+  "deployer": "0x3caC9DD536810260ab5F0678e257a18A54074a66",
+  "ephemeral_accounts": {
+    "dev": "0x194A23a655BE3faF3f98d3050f3574fc204F1bb4",
+    "rev": "0x7ADeebcaa9D1cA984Af70314C1d6ce5D53E5185C",
+    "pub": "0xfb96edFCb60DFcE16E1bBcd9DA2A9C824D8Fafaf"
+  },
+  "bootstrap_token_id": 637,
+  "all_tx_hashes": {
+    "setup": [
+      "3f0caefb6bcdd7f8752dc417ed401e13b35c25a559ce641a7cbd492486286f1e",
+      "c76b8fc0c9fd192de948738d1eeacb8023de85a72c949fcbab15847acd7e5b9b",
+      "02c04037a71a21d05f287ad62dab88e475d9c5634f19dbb4e0c9e84a603978ed",
+      "a33e5f0a43c1c7fbc489c5ef2af84bd1c89f10421c80f81543080d3121c1d7aa",
+      "e6f48610af1fd64328d8994c291788271c1c0fcccda5c5ade647bfc881249494",
+      "aae27090d430d16203515bfd9d4a368759eeaa8476c355868a95b352dd96f335",
+      "3ca33c68a3391c1bd8436066ca38e9af7d161c8b2ebd2024b9eba0cdb5ba171a"
+    ],
+    "T1": [],
+    "T2": [
+      "8b954217ca665a59c81e831ff33a4661174c085ddce601acc9984ed6f5f5d8cf",
+      "48cd67792b78a1ce4fb2e3c866fb82c0fd02ead56dff0562d358c8c4c231d3d4",
+      "0a4bef5237f3d8dffa3000ffc2c706c66b73b34564ee541561ef224582caa96b"
+    ],
+    "T3": [
+      "ac2380a362652b8b2079ac4b43b5cafd9d69ec4b37cf94bb3fb408de3813ead1"
+    ]
+  },
+  "results": [
+    {
+      "attack_id": "T1",
+      "attack_name": "audit-trail deletion",
+      "attempt_prevented": true,
+      "history_intact": true,
+      "detail": "no admin mutator found (0 candidates); 4 records stable",
+      "tx_hashes": []
+    },
+    {
+      "attack_id": "T2",
+      "attack_name": "retroactive claim modification",
+      "attempt_prevented": true,
+      "history_intact": true,
+      "detail": "action.claimRef before=bd1f0b5983b1506f... after=bd1f0b5983b1506f...; live snapshot moved bd1f0b5983b1506f... \u2192 0000000000000000... (attack ran: True)",
+      "tx_hashes": [
+        "8b954217ca665a59c81e831ff33a4661174c085ddce601acc9984ed6f5f5d8cf",
+        "48cd67792b78a1ce4fb2e3c866fb82c0fd02ead56dff0562d358c8c4c231d3d4",
+        "0a4bef5237f3d8dffa3000ffc2c706c66b73b34564ee541561ef224582caa96b"
+      ]
+    },
+    {
+      "attack_id": "T3",
+      "attack_name": "forged deprecation",
+      "attempt_prevented": true,
+      "history_intact": true,
+      "detail": "reverted with 'execution reverted: AccessControl: account 0x7adeebcaa9d1ca984af70314c1d6ce5d53e5185c is missing rol'; 0 forged Deprecated logs emitted",
+      "tx_hashes": [
+        "ac2380a362652b8b2079ac4b43b5cafd9d69ec4b37cf94bb3fb408de3813ead1"
+      ]
+    }
+  ],
+  "ran_at": 1778542599
+}

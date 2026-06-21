@@ -1,0 +1,300 @@
+{
+ "n_runs": 18,
+ "total_rows": 2754,
+ "per_run_counts": [
+  {
+   "file": "gas-benchmarks/run-01",
+   "n_rows": 0
+  },
+  {
+   "file": "gas-benchmarks/run-02",
+   "n_rows": 8
+  },
+  {
+   "file": "gas-benchmarks/run-03",
+   "n_rows": 6
+  },
+  {
+   "file": "gas-benchmarks/run-04",
+   "n_rows": 7
+  },
+  {
+   "file": "gas-benchmarks/run-05",
+   "n_rows": 6
+  },
+  {
+   "file": "gas-benchmarks/run-06",
+   "n_rows": 8
+  },
+  {
+   "file": "gas-benchmarks/run-07",
+   "n_rows": 7
+  },
+  {
+   "file": "gas-benchmarks/run-08",
+   "n_rows": 33
+  },
+  {
+   "file": "gas-benchmarks/run-09",
+   "n_rows": 8
+  },
+  {
+   "file": "gas-benchmarks/run-10",
+   "n_rows": 27
+  },
+  {
+   "file": "gas-benchmarks/run-11",
+   "n_rows": 81
+  },
+  {
+   "file": "gas-benchmarks/run-12",
+   "n_rows": 90
+  },
+  {
+   "file": "gas-benchmarks/run-13",
+   "n_rows": 95
+  },
+  {
+   "file": "gas-benchmarks/run-14",
+   "n_rows": 106
+  },
+  {
+   "file": "gas-benchmarks/run-15",
+   "n_rows": 97
+  },
+  {
+   "file": "gas-benchmarks/run-16",
+   "n_rows": 1224
+  },
+  {
+   "file": "gas-benchmarks/run-17",
+   "n_rows": 799
+  },
+  {
+   "file": "gas-benchmarks/run-18",
+   "n_rows": 152
+  }
+ ],
+ "success": {
+  "createModelCard": {
+   "n": 152,
+   "mean": 644401.8,
+   "median": 653345,
+   "p25": 653333,
+   "p75": 653345,
+   "p95": 653345,
+   "min": 581808,
+   "max": 653345,
+   "std": 23729.7,
+   "cv_pct": 3.682
+  },
+  "submitForEvaluation": {
+   "n": 165,
+   "mean": 373664.0,
+   "median": 381906,
+   "p25": 381894,
+   "p75": 381906,
+   "p95": 381906,
+   "min": 310369,
+   "max": 381906,
+   "std": 22899.7,
+   "cv_pct": 6.128
+  },
+  "validateModelCard": {
+   "n": 137,
+   "mean": 345810.9,
+   "median": 352722,
+   "p25": 352710,
+   "p75": 352722,
+   "p95": 352722,
+   "min": 278987,
+   "max": 369822,
+   "std": 21391.0,
+   "cv_pct": 6.186
+  },
+  "requestRevision": {
+   "n": 54,
+   "mean": 441735.6,
+   "median": 446058,
+   "p25": 446046,
+   "p75": 446058,
+   "p95": 446058,
+   "min": 372323,
+   "max": 460948,
+   "std": 17763.5,
+   "cv_pct": 4.021
+  },
+  "reviseModelCard": {
+   "n": 38,
+   "mean": 848628.5,
+   "median": 852399,
+   "p25": 852387,
+   "p75": 852399,
+   "p95": 852411,
+   "min": 780838,
+   "max": 852411,
+   "std": 16191.4,
+   "cv_pct": 1.908
+  },
+  "submitRevision": {
+   "n": 14,
+   "mean": 852462.4,
+   "median": 852459,
+   "p25": 852459,
+   "p75": 852471,
+   "p95": 852471,
+   "min": 852447,
+   "max": 852471,
+   "std": 7.3,
+   "cv_pct": 0.001
+  },
+  "rejectModelCard": {
+   "n": 43,
+   "mean": 414428.0,
+   "median": 423182,
+   "p25": 423158,
+   "p75": 423182,
+   "p95": 423182,
+   "min": 349447,
+   "max": 440270,
+   "std": 24615.9,
+   "cv_pct": 5.94
+  },
+  "publishModelCard": {
+   "n": 117,
+   "mean": 757690.7,
+   "median": 752306,
+   "p25": 752294,
+   "p75": 752306,
+   "p95": 799373,
+   "min": 678583,
+   "max": 850673,
+   "std": 23649.6,
+   "cv_pct": 3.121
+  },
+  "deprecateModelCard": {
+   "n": 16,
+   "mean": 409522.8,
+   "median": 423495,
+   "p25": 422877,
+   "p75": 423507,
+   "p95": 423507,
+   "min": 349772,
+   "max": 423507,
+   "std": 29647.1,
+   "cv_pct": 7.239
+  },
+  "addClaim": {
+   "n": 12,
+   "mean": 361691,
+   "median": 361684,
+   "p25": 361678,
+   "p75": 361702,
+   "p95": 361714,
+   "min": 361678,
+   "max": 361714,
+   "std": 14.9,
+   "cv_pct": 0.004
+  }
+ },
+ "revert": {
+  "createModelCard": null,
+  "submitForEvaluation": {
+   "n": 455,
+   "mean": 30404.6,
+   "median": 30400,
+   "p25": 30400,
+   "p75": 30412,
+   "p95": 30412,
+   "min": 30364,
+   "max": 30412,
+   "std": 8.5,
+   "cv_pct": 0.028
+  },
+  "validateModelCard": {
+   "n": 217,
+   "mean": 50799.7,
+   "median": 50571,
+   "p25": 50559,
+   "p75": 50571,
+   "p95": 50571,
+   "min": 50535,
+   "max": 67659,
+   "std": 2000.3,
+   "cv_pct": 3.938
+  },
+  "requestRevision": {
+   "n": 134,
+   "mean": 54823.4,
+   "median": 53299,
+   "p25": 53287,
+   "p75": 53299,
+   "p95": 70387,
+   "min": 53263,
+   "max": 70387,
+   "std": 4899.4,
+   "cv_pct": 8.937
+  },
+  "reviseModelCard": {
+   "n": 95,
+   "mean": 56079.2,
+   "median": 56084,
+   "p25": 56072,
+   "p75": 56096,
+   "p95": 56096,
+   "min": 56024,
+   "max": 56096,
+   "std": 17.0,
+   "cv_pct": 0.03
+  },
+  "submitRevision": {
+   "n": 25,
+   "mean": 56144.5,
+   "median": 56144,
+   "p25": 56144,
+   "p75": 56156,
+   "p95": 56156,
+   "min": 56120,
+   "max": 56156,
+   "std": 11.2,
+   "cv_pct": 0.02
+  },
+  "rejectModelCard": {
+   "n": 112,
+   "mean": 53287.5,
+   "median": 52674,
+   "p25": 52674,
+   "p75": 52686,
+   "p95": 52686,
+   "min": 52650,
+   "max": 69786,
+   "std": 3187.1,
+   "cv_pct": 5.981
+  },
+  "publishModelCard": {
+   "n": 157,
+   "mean": 50815.9,
+   "median": 50279,
+   "p25": 50267,
+   "p75": 50279,
+   "p95": 50279,
+   "min": 50231,
+   "max": 67367,
+   "std": 3011.0,
+   "cv_pct": 5.925
+  },
+  "deprecateModelCard": {
+   "n": 159,
+   "mean": 49399.5,
+   "median": 52833,
+   "p25": 52584,
+   "p75": 52839,
+   "p95": 52845,
+   "min": 31709,
+   "max": 69933,
+   "std": 8970.4,
+   "cv_pct": 18.159
+  },
+  "addClaim": null
+ }
+}

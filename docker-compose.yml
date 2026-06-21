@@ -1,0 +1,215 @@
+services:
+  hardhat:
+    build:
+      context: ./contracts
+      dockerfile: Dockerfile.hardhat
+    container_name: smart-hardhat
+    ports:
+      - "8545:8545"
+    volumes:
+      - hardhat-deployments:/deployments
+    networks:
+      - smart-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "sh", "-c", "wget -q -O- --post-data='{\"jsonrpc\":\"2.0\",\"method\":\"eth_blockNumber\",\"params\":[],\"id\":1}' --header='Content-Type: application/json' http://localhost:8545 2>/dev/null | grep -q 'result'"]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+      start_period: 60s
+
+  neo4j:
+    image: neo4j:5.15-community
+    container_name: smart-neo4j
+    environment:
+      - NEO4J_AUTH=none
+      - NEO4JLABS_PLUGINS=["apoc"]
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_dbms_security_procedures_unrestricted=apoc.*
+      - NEO4J_dbms_memory_heap_max__size=1G
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4j-data:/data
+      - neo4j-logs:/logs
+    networks:
+      - smart-network
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:7474 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+
+  minio:
+    image: minio/minio:latest
+    container_name: smart-minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      - MINIO_ROOT_USER=minioadmin
+      - MINIO_ROOT_PASSWORD=minioadmin
+    volumes:
+      - minio-data:/data
+    command: server /data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - smart-network
+    restart: unless-stopped
+
+  minio-init:
+    image: minio/mc:latest
+    container_name: smart-minio-init
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: >
+      /bin/sh -c "
+      mc alias set myminio http://minio:9000 minioadmin minioadmin;
+      mc mb --ignore-existing myminio/model-cards;
+      mc anonymous set public myminio/model-cards;
+      echo 'MinIO bucket initialized successfully';
+      exit 0;
+      "
+    networks:
+      - smart-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: smart-backend
+    ports:
+      - "8000:8000"
+    mem_limit: 2g
+    mem_reservation: 1g
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        if [ -f /deployments/.env.contracts ]; then
+          set -a
+          . /deployments/.env.contracts
+          set +a
+        else
+          echo "WARN: /deployments/.env.contracts not found; backend will fail to resolve contract addresses."
+        fi
+        exec uvicorn app.main:app --host 0.0.0.0 --port 8000
+    environment:
+      - APP_NAME=SMART API
+      - DEBUG=False
+      - HOST=0.0.0.0
+      - PORT=8000
+
+      # Neo4j
+      - NEO4J_URI=bolt://neo4j:7687
+      - NEO4J_USER=neo4j
+      - NEO4J_PASSWORD=
+      - NEO4J_DATABASE=neo4j
+
+      # MinIO
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+      - MINIO_SECURE=False
+      - MINIO_BUCKET_NAME=model-cards
+      - MINIO_URL=http://minio:9000
+
+      # Blockchain
+      - WEB3_PROVIDER_URL=http://hardhat:8545
+      - INFURA_URL=http://hardhat:8545
+      - CHAIN_ID=1337
+      - MAX_GAS_PRICE=50
+
+      # Signer keys come from the environment (.env). For local Hardhat, use the
+      # accounts printed by `npx hardhat node`. See README "Local development keys".
+      - PRIVATE_KEY=${PRIVATE_KEY:-}
+      - WALLET_ADDRESS=${WALLET_ADDRESS:-}
+      - RELAYER_PRIVATE_KEY=${RELAYER_PRIVATE_KEY:-}
+      - HARDHAT_TEST_ACCOUNTS=${HARDHAT_TEST_ACCOUNTS:-{}}
+
+      # Smart-contract addresses (overwritten by hardhat-deployments at runtime)
+      - SMART_LIFECYCLE_ADDRESS=
+      - SMART_RELAYER_ADDRESS=
+      - SMART_IDENTITY_REGISTRY_ADDRESS=
+      - SMART_MODEL_CARD_SBT_ADDRESS=
+      - MODEL_CARD_REGISTRY_ADDRESS=
+      - SMART_ACCOUNT_FACTORY_ADDRESS=
+      - SMART_PAYMASTER_ADDRESS=
+      - SMART_USERNAME_REGISTRY_ADDRESS=
+      - ENTRYPOINT_ADDRESS=0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789
+
+      # Roles (keccak256 selectors used by SMARTLifecycle)
+      - DEVELOPER_ROLE=0x4504b9dfd7400a1522f49a8b4a100552da9236849581fd59b7363eb48c6a474c
+      - AUTHENTICATOR_ROLE=0x190acb99f29d9641c9ad47655049f2d7c78fcbc837d62e7981d28c871f722081
+      - PUBLISHER_ROLE=0xe80a9cba93bb15ddf0cd35ac63a8ca08d53c8deeb9f0e47a75b8a62f15055a8d
+      - ADMIN_ROLE=0xa49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775
+
+      # Auth
+      - JWT_SECRET_KEY=dev-secret-key-change-in-production
+      - JWT_ALGORITHM=HS256
+      - ACCESS_TOKEN_EXPIRE_MINUTES=30
+      - OTP_EXPIRY_SECONDS=300
+      - TOKEN_EXPIRY_SECONDS=3600
+
+      - CORS_ORIGINS=http://localhost:3000,http://frontend:3000
+    volumes:
+      - hardhat-deployments:/deployments:ro
+    depends_on:
+      hardhat:
+        condition: service_healthy
+      neo4j:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    networks:
+      - smart-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: dev
+    container_name: smart-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - NEXT_PUBLIC_WEB3_PROVIDER_URL=http://localhost:8545
+      - NEXT_PUBLIC_CHAIN_ID=1337
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - smart-network
+    restart: unless-stopped
+
+networks:
+  smart-network:
+    driver: bridge
+    name: smart-network
+
+volumes:
+  hardhat-deployments:
+  neo4j-data:
+  neo4j-logs:
+  minio-data:

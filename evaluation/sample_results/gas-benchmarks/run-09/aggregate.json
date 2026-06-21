@@ -1,0 +1,19 @@
+{
+  "ranAt": 1778096728,
+  "rpc": "https://polygon-amoy.infura.io/v3/REDACTED",
+  "api": "http://localhost:8001",
+  "start_block": 37913934,
+  "end_block": 37913953,
+  "n_tx_total": 8,
+  "per_op": [
+    {
+      "op": "unknown",
+      "n": 8,
+      "mean": 913054.75,
+      "median": 1090120.0,
+      "stdev": 321590.8102164729,
+      "min": 356185,
+      "max": 1107232
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "check": "RPC reachable",
+    "pass": true,
+    "error": null
+  },
+  {
+    "check": "chain id is 1337",
+    "pass": true,
+    "error": null
+  },
+  {
+    "check": "contract addresses + bytecode",
+    "pass": true,
+    "error": null
+  },
+  {
+    "check": "ABIs loadable",
+    "pass": true,
+    "error": null
+  },
+  {
+    "check": "9 fixtures funded",
+    "pass": true,
+    "error": null
+  },
+  {
+    "check": "backend /health",
+    "pass": true,
+    "error": null
+  },
+  {
+    "check": "chain reader distinguishes bytecode",
+    "pass": true,
+    "error": null
+  },
+  {
+    "check": "paired positive/negative call",
+    "pass": true,
+    "error": null
+  }
+]

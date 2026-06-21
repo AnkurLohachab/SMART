@@ -1,0 +1,258 @@
+{
+  "summary": {
+    "card_count": {
+      "rows": [
+        {
+          "point": 0,
+          "n": 3,
+          "p50_s": 0.023089625000466185,
+          "p95_s": 0.032353062200218115
+        },
+        {
+          "point": 10,
+          "n": 3,
+          "p50_s": 0.01880387500023062,
+          "p95_s": 0.032508138100092766
+        },
+        {
+          "point": 25,
+          "n": 3,
+          "p50_s": 0.017720249999911175,
+          "p95_s": 0.023242838099940853
+        },
+        {
+          "point": 50,
+          "n": 3,
+          "p50_s": 0.020003457999337115,
+          "p95_s": 0.020945158600534343
+        },
+        {
+          "point": 100,
+          "n": 3,
+          "p50_s": 0.01749066699994728,
+          "p95_s": 0.01883072919972619
+        }
+      ],
+      "log_log_slope": -0.09299961303126894,
+      "log_log_intercept": -3.594545210332862
+    },
+    "actions_per_card_read": {
+      "rows": [
+        {
+          "point": 0,
+          "n": 3,
+          "p50_s": 0.005391334000705683,
+          "p95_s": 0.005703333399924304
+        },
+        {
+          "point": 10,
+          "n": 3,
+          "p50_s": 0.010353374000260374,
+          "p95_s": 0.011907600200902379
+        },
+        {
+          "point": 25,
+          "n": 3,
+          "p50_s": 0.013344999000764801,
+          "p95_s": 0.01827013740030452
+        },
+        {
+          "point": 50,
+          "n": 3,
+          "p50_s": 0.010511958000279265,
+          "p95_s": 0.010514732699994056
+        },
+        {
+          "point": 100,
+          "n": 3,
+          "p50_s": 0.010252625000248372,
+          "p95_s": 0.010321100600503997
+        }
+      ],
+      "log_log_slope": -0.05723918589051171,
+      "log_log_intercept": -4.275476871207
+    }
+  },
+  "rows": [
+    {
+      "sweep": "card_count",
+      "point": 0,
+      "rep": 0,
+      "latency_s": 0.02199166599984892
+    },
+    {
+      "sweep": "card_count",
+      "point": 0,
+      "rep": 1,
+      "latency_s": 0.033382333000190556
+    },
+    {
+      "sweep": "card_count",
+      "point": 0,
+      "rep": 2,
+      "latency_s": 0.023089625000466185
+    },
+    {
+      "sweep": "card_count",
+      "point": 10,
+      "rep": 0,
+      "latency_s": 0.03403083400007745
+    },
+    {
+      "sweep": "card_count",
+      "point": 10,
+      "rep": 1,
+      "latency_s": 0.01794012499976816
+    },
+    {
+      "sweep": "card_count",
+      "point": 10,
+      "rep": 2,
+      "latency_s": 0.01880387500023062
+    },
+    {
+      "sweep": "card_count",
+      "point": 25,
+      "rep": 0,
+      "latency_s": 0.01761833300042781
+    },
+    {
+      "sweep": "card_count",
+      "point": 25,
+      "rep": 1,
+      "latency_s": 0.023856458999944152
+    },
+    {
+      "sweep": "card_count",
+      "point": 25,
+      "rep": 2,
+      "latency_s": 0.017720249999911175
+    },
+    {
+      "sweep": "card_count",
+      "point": 50,
+      "rep": 0,
+      "latency_s": 0.021049792000667367
+    },
+    {
+      "sweep": "card_count",
+      "point": 50,
+      "rep": 1,
+      "latency_s": 0.020003457999337115
+    },
+    {
+      "sweep": "card_count",
+      "point": 50,
+      "rep": 2,
+      "latency_s": 0.017942458000106853
+    },
+    {
+      "sweep": "card_count",
+      "point": 100,
+      "rep": 0,
+      "latency_s": 0.01749066699994728
+    },
+    {
+      "sweep": "card_count",
+      "point": 100,
+      "rep": 1,
+      "latency_s": 0.018979624999701628
+    },
+    {
+      "sweep": "card_count",
+      "point": 100,
+      "rep": 2,
+      "latency_s": 0.01716170800045802
+    },
+    {
+      "sweep": "actions_per_card_read",
+      "point": 0,
+      "rep": 0,
+      "latency_s": 0.005737999999837484
+    },
+    {
+      "sweep": "actions_per_card_read",
+      "point": 0,
+      "rep": 1,
+      "latency_s": 0.005204457999752776
+    },
+    {
+      "sweep": "actions_per_card_read",
+      "point": 0,
+      "rep": 2,
+      "latency_s": 0.005391334000705683
+    },
+    {
+      "sweep": "actions_per_card_read",
+      "point": 10,
+      "rep": 0,
+      "latency_s": 0.010353374000260374
+    },
+    {
+      "sweep": "actions_per_card_read",
+      "point": 10,
+      "rep": 1,
+      "latency_s": 0.010348083999815572
+    },
+    {
+      "sweep": "actions_per_card_read",
+      "point": 10,
+      "rep": 2,
+      "latency_s": 0.012080292000973714
+    },
+    {
+      "sweep": "actions_per_card_read",
+      "point": 25,
+      "rep": 0,
+      "latency_s": 0.013344999000764801
+    },
+    {
+      "sweep": "actions_per_card_read",
+      "point": 25,
+      "rep": 1,
+      "latency_s": 0.01184270799967635
+    },
+    {
+      "sweep": "actions_per_card_read",
+      "point": 25,
+      "rep": 2,
+      "latency_s": 0.018817375000253378
+    },
+    {
+      "sweep": "actions_per_card_read",
+      "point": 50,
+      "rep": 0,
+      "latency_s": 0.010515040999962366
+    },
+    {
+      "sweep": "actions_per_card_read",
+      "point": 50,
+      "rep": 1,
+      "latency_s": 0.010511958000279265
+    },
+    {
+      "sweep": "actions_per_card_read",
+      "point": 50,
+      "rep": 2,
+      "latency_s": 0.01025762399967789
+    },
+    {
+      "sweep": "actions_per_card_read",
+      "point": 100,
+      "rep": 0,
+      "latency_s": 0.010328709000532399
+    },
+    {
+      "sweep": "actions_per_card_read",
+      "point": 100,
+      "rep": 1,
+      "latency_s": 0.010150582999813196
+    },
+    {
+      "sweep": "actions_per_card_read",
+      "point": 100,
+      "rep": 2,
+      "latency_s": 0.010252625000248372
+    }
+  ]
+}

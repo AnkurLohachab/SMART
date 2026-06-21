@@ -1,0 +1,11 @@
+tier,extractor,vocab_variant,n_raw,N,n_oov,n_covered
+M,regex-baseline-v2[Mandatory],curated,440,172,63,135
+M,regex-baseline-v2[Mandatory],truncated30,440,147,86,109
+M,regex-baseline-v2[Mandatory],overextended,440,177,62,147
+M+R,regex-baseline-v2[Mandatory+Recommended],curated,543,200,74,159
+M+R,regex-baseline-v2[Mandatory+Recommended],truncated30,543,170,95,128
+M+R,regex-baseline-v2[Mandatory+Recommended],overextended,543,204,73,170
+M+R+P,regex-baseline-v2[Mandatory+Recommended+Permitted],curated,604,210,77,169
+M+R+P,regex-baseline-v2[Mandatory+Recommended+Permitted],truncated30,604,174,98,132
+M+R+P,regex-baseline-v2[Mandatory+Recommended+Permitted],overextended,604,216,76,181
+M,openrouter[openai/gpt-oss-120b:free],curated,2194,341,213,284

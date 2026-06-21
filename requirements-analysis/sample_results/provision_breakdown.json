@@ -1,0 +1,26 @@
+{
+  "total_rows": 183,
+  "fully_canonicalised": 98,
+  "partial_one_slot_unknown": 75,
+  "partial_two_slots_unknown": 10,
+  "partial_three_slots_unknown": 0,
+  "fully_canonicalised_by_component": {
+    "N/A": 26,
+    "Schema": 51,
+    "Schema+Lifecycle": 6,
+    "Lifecycle": 14,
+    "Lifecycle+Chain": 1
+  },
+  "in_scope": 72,
+  "out_of_scope": 26,
+  "examples_fully_canonicalised": [
+    "(Authorised_Representative, Disclose, Mandate) n_sources=1 component=N/A",
+    "(Authorised_Representative, Produce, TransparencyInformation) n_sources=1 component=Schema",
+    "(Authority, Assess, CorrectiveAction) n_sources=1 component=Schema+Lifecycle"
+  ],
+  "examples_partial": [
+    "(Authorised_Representative, Produce, Unknown_Artefact) n_unknown=1 n_sources=1",
+    "(Authority, Assess, Unknown_Artefact) n_unknown=1 n_sources=10",
+    "(Authority, Disclose, Unknown_Artefact) n_unknown=1 n_sources=20"
+  ]
+}

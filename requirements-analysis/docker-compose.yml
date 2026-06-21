@@ -1,0 +1,20 @@
+# Sidecar compose for the requirements-audit pipeline.
+# Run from this directory:
+#   docker compose -f docker-compose.yml build
+#   docker compose -f docker-compose.yml run --rm requirements-analysis bash run.sh
+#   docker compose -f docker-compose.yml run --rm requirements-analysis pytest -v
+services:
+  requirements-analysis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: smart-requirements-analysis:latest
+    container_name: smart-requirements-analysis
+    working_dir: /work
+    volumes:
+      - ./:/work
+    environment:
+      PYTHONPATH: /work
+    env_file:
+      - .env
+    profiles: ["legal"]

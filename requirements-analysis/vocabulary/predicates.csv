@@ -1,0 +1,13 @@
+canonical,description
+Produce,"Create / draw up / establish / prepare a documentation artefact."
+Maintain,"Keep up-to-date / keep available / preserve over a retention period."
+Disclose,"Make available / provide / share with another party."
+Monitor,"Observe in operation; collect post-market or runtime data."
+Report,"Notify / submit a report to an authority or other party."
+Assess,"Evaluate / analyse / test against a defined criterion."
+RecordChange,"Track / log / version-control changes to an artefact."
+RestrictUse,"Specify intended use / contraindications / out-of-scope conditions."
+Approve,"Grant authorisation / certify / sign off on a state transition."
+Verify,"Independently confirm / validate / audit content."
+Retain,"Store under defined access controls and retention period."
+Translate,"Provide in a language accessible to the recipient (deployer, user)."

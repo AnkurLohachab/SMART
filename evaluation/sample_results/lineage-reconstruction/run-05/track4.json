@@ -1,0 +1,201 @@
+{
+  "n_cells": 61,
+  "floor_median_gas": 26149,
+  "by_action": [
+    {
+      "action": "challenge",
+      "actor_type": "direct_eoa",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 59715,
+      "ratio_over_floor": 2.283643733986003
+    },
+    {
+      "action": "create",
+      "actor_type": "direct_eoa",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 558703,
+      "ratio_over_floor": 21.366132548089794
+    },
+    {
+      "action": "create",
+      "actor_type": "relayer",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 580289,
+      "ratio_over_floor": 22.191632567210984
+    },
+    {
+      "action": "create_size",
+      "actor_type": "direct_eoa",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 1317734,
+      "ratio_over_floor": 50.39328463803587
+    },
+    {
+      "action": "create_size",
+      "actor_type": "direct_eoa",
+      "size_kb": 10,
+      "n": 3,
+      "median_gas": 7949877,
+      "ratio_over_floor": 304.02221882289956
+    },
+    {
+      "action": "deprecate",
+      "actor_type": "direct_eoa",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 350126,
+      "ratio_over_floor": 13.389651611916326
+    },
+    {
+      "action": "deprecate",
+      "actor_type": "relayer",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 369441,
+      "ratio_over_floor": 14.128303185590271
+    },
+    {
+      "action": "metadata_max_bytes",
+      "actor_type": "direct_eoa",
+      "size_kb": 35,
+      "n": 1,
+      "median_gas": 26978239,
+      "ratio_over_floor": 1031.712073119431
+    },
+    {
+      "action": "publish",
+      "actor_type": "direct_eoa",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 583719,
+      "ratio_over_floor": 22.322803931316685
+    },
+    {
+      "action": "publish",
+      "actor_type": "relayer",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 601906,
+      "ratio_over_floor": 23.018318100118552
+    },
+    {
+      "action": "request_revision",
+      "actor_type": "direct_eoa",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 348297,
+      "ratio_over_floor": 13.31970629852002
+    },
+    {
+      "action": "request_revision",
+      "actor_type": "relayer",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 367655,
+      "ratio_over_floor": 14.060002294542812
+    },
+    {
+      "action": "revise",
+      "actor_type": "direct_eoa",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 573850,
+      "ratio_over_floor": 21.9453898810662
+    },
+    {
+      "action": "revise",
+      "actor_type": "relayer",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 593624,
+      "ratio_over_floor": 22.70159470725458
+    },
+    {
+      "action": "submit",
+      "actor_type": "direct_eoa",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 355252,
+      "ratio_over_floor": 13.58568205285097
+    },
+    {
+      "action": "submit",
+      "actor_type": "relayer",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 373759,
+      "ratio_over_floor": 14.293433783318674
+    },
+    {
+      "action": "validate",
+      "actor_type": "direct_eoa",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 324458,
+      "ratio_over_floor": 12.408046196795288
+    },
+    {
+      "action": "validate",
+      "actor_type": "relayer",
+      "size_kb": 1,
+      "n": 3,
+      "median_gas": 342877,
+      "ratio_over_floor": 13.112432597804887
+    }
+  ],
+  "relayer_overhead": [
+    {
+      "action": "create",
+      "direct_gas": 558703,
+      "relayer_gas": 580289,
+      "relayer_overhead_gas": 21586,
+      "relayer_overhead_pct": 3.863591210356844
+    },
+    {
+      "action": "deprecate",
+      "direct_gas": 350126,
+      "relayer_gas": 369441,
+      "relayer_overhead_gas": 19315,
+      "relayer_overhead_pct": 5.516585457806618
+    },
+    {
+      "action": "publish",
+      "direct_gas": 583719,
+      "relayer_gas": 601906,
+      "relayer_overhead_gas": 18187,
+      "relayer_overhead_pct": 3.115711498169496
+    },
+    {
+      "action": "request_revision",
+      "direct_gas": 348297,
+      "relayer_gas": 367655,
+      "relayer_overhead_gas": 19358,
+      "relayer_overhead_pct": 5.557900297734405
+    },
+    {
+      "action": "revise",
+      "direct_gas": 573850,
+      "relayer_gas": 593624,
+      "relayer_overhead_gas": 19774,
+      "relayer_overhead_pct": 3.445848218175481
+    },
+    {
+      "action": "submit",
+      "direct_gas": 355252,
+      "relayer_gas": 373759,
+      "relayer_overhead_gas": 18507,
+      "relayer_overhead_pct": 5.209541395966807
+    },
+    {
+      "action": "validate",
+      "direct_gas": 324458,
+      "relayer_gas": 342877,
+      "relayer_overhead_gas": 18419,
+      "relayer_overhead_pct": 5.676851857559376
+    }
+  ]
+}

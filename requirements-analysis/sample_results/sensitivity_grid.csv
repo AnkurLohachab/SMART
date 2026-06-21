@@ -1,0 +1,12 @@
+tier,extractor,vocab_variant,n_raw,N,n_oov,n_covered
+M,regex-baseline-v2[Mandatory],curated,440,158,71,115
+M,regex-baseline-v2[Mandatory],truncated30,440,123,98,79
+M,regex-baseline-v2[Mandatory],overextended,440,161,71,121
+M+R,regex-baseline-v2[Mandatory+Recommended],curated,543,183,85,136
+M+R,regex-baseline-v2[Mandatory+Recommended],truncated30,543,138,110,91
+M+R,regex-baseline-v2[Mandatory+Recommended],overextended,543,186,83,144
+M+R+P,regex-baseline-v2[Mandatory+Recommended+Permitted],curated,604,190,87,143
+M+R+P,regex-baseline-v2[Mandatory+Recommended+Permitted],truncated30,604,142,112,95
+M+R+P,regex-baseline-v2[Mandatory+Recommended+Permitted],overextended,604,194,86,152
+M,deepinfra[Qwen/Qwen2.5-72B-Instruct],curated,3685,307,177,252
+M,deepinfra[meta-llama/Llama-3.3-70B-Instruct-Turbo],curated,6693,351,229,275

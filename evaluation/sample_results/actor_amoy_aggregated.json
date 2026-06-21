@@ -1,0 +1,42 @@
+{
+  "n_scenario_rows": 2387,
+  "n_status1_classified": 748,
+  "n_unclassified_status1": 0,
+  "actors": {
+    "alice.org": {
+      "role": "AI Developer",
+      "total": 369,
+      "by_op": {
+        "submitForEvaluation": 165,
+        "createModelCard": 152,
+        "reviseModelCard": 38,
+        "submitRevision": 14
+      }
+    },
+    "deployer": {
+      "role": "Platform admin",
+      "total": 12,
+      "by_op": {
+        "addClaim": 12
+      }
+    },
+    "carol.org": {
+      "role": "Publisher",
+      "total": 133,
+      "by_op": {
+        "publishModelCard": 117,
+        "deprecateModelCard": 16
+      }
+    },
+    "bob.org": {
+      "role": "Reviewer",
+      "total": 234,
+      "by_op": {
+        "rejectModelCard": 43,
+        "validateModelCard": 137,
+        "requestRevision": 54
+      }
+    }
+  },
+  "unclassified_pairs": {}
+}

@@ -1,0 +1,7 @@
+# negative control
+  n_paragraphs: 4
+  n_raw_obligations: 0
+  n_equivalence_classes: 0
+  n_covered: 0
+  n_oov: 0
+  specificity_pass: True

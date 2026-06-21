@@ -1,0 +1,40 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Install dependencies
+RUN apk add --no-cache python3 make g++ git curl
+
+# Copy package files
+COPY package*.json ./
+
+# Install npm dependencies
+RUN npm install
+
+# Copy contract files
+COPY . .
+
+# Compile contracts
+RUN npx hardhat compile
+
+# Create deployments directory
+RUN mkdir -p /deployments
+
+# Expose Hardhat node port
+EXPOSE 8545
+
+# Create entrypoint script
+RUN echo '#!/bin/sh' > /app/entrypoint.sh && \
+    echo 'set -e' >> /app/entrypoint.sh && \
+    echo 'echo "Starting Hardhat node..."' >> /app/entrypoint.sh && \
+    echo 'npx hardhat node --hostname 0.0.0.0 &' >> /app/entrypoint.sh && \
+    echo 'HARDHAT_PID=$!' >> /app/entrypoint.sh && \
+    echo 'echo "Waiting for Hardhat node to start..."' >> /app/entrypoint.sh && \
+    echo 'sleep 10' >> /app/entrypoint.sh && \
+    echo 'echo "Deploying contracts..."' >> /app/entrypoint.sh && \
+    echo 'npx hardhat run scripts/deploy-local.js --network localhost' >> /app/entrypoint.sh && \
+    echo 'echo "Deployment complete! Hardhat node running on port 8545"' >> /app/entrypoint.sh && \
+    echo 'wait $HARDHAT_PID' >> /app/entrypoint.sh && \
+    chmod +x /app/entrypoint.sh
+
+CMD ["/app/entrypoint.sh"]

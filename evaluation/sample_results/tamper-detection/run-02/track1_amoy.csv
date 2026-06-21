@@ -1,0 +1,4 @@
+attack_id,attack_name,attempt_prevented,history_intact,detail,tx_hashes
+T1,audit-trail deletion,True,True,no admin mutator found (0 candidates); 4 records stable,
+T2,retroactive claim modification,True,True,action.claimRef before=bd1f0b5983b1506f... after=bd1f0b5983b1506f...; live snapshot moved bd1f0b5983b1506f... -> 0000000000000000... (attack ran: True),8b954217ca665a59c81e831ff33a4661174c085ddce601acc9984ed6f5f5d8cf;48cd67792b78a1ce4fb2e3c866fb82c0fd02ead56dff0562d358c8c4c231d3d4;0a4bef5237f3d8dffa3000ffc2c706c66b73b34564ee541561ef224582caa96b
+T3,forged deprecation,True,True,reverted with 'execution reverted: AccessControl: account 0x7adeebcaa9d1ca984af70314c1d6ce5d53e5185c is missing rol'; 0 forged Deprecated logs emitted,ac2380a362652b8b2079ac4b43b5cafd9d69ec4b37cf94bb3fb408de3813ead1

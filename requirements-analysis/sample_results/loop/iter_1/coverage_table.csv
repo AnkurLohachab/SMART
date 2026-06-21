@@ -1,0 +1,33 @@
+artefact,smart_section,smart_component,sources,n_provisions,note
+ChangeControlPlan,Section 7,Lifecycle,fda_pccp_guidance_2024,3,Lifecycle revision dialogue + version registry.
+ChangeNotification,Section 7,Lifecycle,eu_ai_act_2024_1689;eu_mdr_2017_745;fda_lifecycle_draft_2025;fda_pccp_guidance_2024,10,Lifecycle revision dialogue records changes.
+ConformityAssessment,Section 7,Schema,eu_ai_act_2024_1689;eu_mdr_2017_745,11,Governance section.
+ContactInformation,Section 1,Schema,eu_ai_act_2024_1689,1,Model Identification — single contact point.
+CorrectiveAction,Section 6,Schema+Lifecycle,eu_ai_act_2024_1689;eu_mdr_2017_745,4,Caveats & Limitations + Revise transition.
+CybersecurityProvisions,Section 7,Schema,fda_lifecycle_draft_2025,1,Governance section.
+DecisionRecord,N/A,N/A,eu_ai_act_2024_1689;eu_mdr_2017_745;fda_lifecycle_draft_2025,6,"Out of scope — pertains to authorities, not the developer."
+DeclarationOfConformity,Section 7,Schema,eu_ai_act_2024_1689;eu_mdr_2017_745,5,Governance section.
+DeviceIdentifier,Section 1,Schema,eu_ai_act_2024_1689;eu_mdr_2017_745;fda_lifecycle_draft_2025,14,Model Identification (UDI-DI / GMDN).
+DeviceSamples,N/A,N/A,eu_mdr_2017_745,1,Out of scope — physical device samples.
+ElectronicSubmission,N/A,N/A,eu_ai_act_2024_1689;eu_mdr_2017_745,15,Out of scope — EU regulatory submission system.
+GeneratedContentDisclosure,N/A,N/A,eu_ai_act_2024_1689,1,"Out of scope — applies to generative-AI outputs, not model-card metadata."
+HumanOversightProvisions,Section 7,Schema,eu_ai_act_2024_1689,1,Governance section.
+IntendedUse,Section 2,Schema,eu_mdr_2017_745;fda_lifecycle_draft_2025,3,Intended Use and Clinical Context.
+InvestigationReport,N/A,N/A,eu_ai_act_2024_1689;eu_mdr_2017_745,10,Out of scope — authority-side investigation.
+LanguageLocalisation,N/A,Schema,eu_ai_act_2024_1689;eu_mdr_2017_745,3,JSON/HTML/Markdown export channels.
+Mandate,N/A,N/A,eu_ai_act_2024_1689;eu_mdr_2017_745,2,Out of scope — authorised-representative mandates.
+PerformanceMetrics,Section 4,Schema,eu_mdr_2017_745;fda_lifecycle_draft_2025;fda_pccp_guidance_2024,7,Performance Characterisation.
+PostMarketMonitoringReport,Section 6,Lifecycle,eu_ai_act_2024_1689;eu_mdr_2017_745,6,Lifecycle Revise transitions.
+PostMarketSurveillancePlan,Section 6,Schema+Lifecycle,eu_mdr_2017_745,2,Caveats + governed lifecycle Maintain phase.
+Registration,N/A,Lifecycle+Chain,eu_mdr_2017_745,1,On-chain registration of the model card.
+RegulatorySandbox,N/A,N/A,eu_ai_act_2024_1689,3,Out of scope — sandbox provision applies to deployment infrastructure.
+RiskManagementSystem,Section 5,Schema,eu_mdr_2017_745;fda_lifecycle_draft_2025;fda_pccp_guidance_2024,4,Benefit–Risk Summary.
+RoleAssignment,N/A,Lifecycle+Chain,eu_ai_act_2024_1689,1,Per-role smart accounts.
+SandboxOutcome,N/A,N/A,eu_ai_act_2024_1689,1,Out of scope — sandbox exit reports.
+SeriousIncidentReport,Section 6,Schema,eu_ai_act_2024_1689;eu_mdr_2017_745,6,Caveats & Limitations free-text capture.
+TechnicalDocumentation,All 7 sections,Schema,eu_ai_act_2024_1689;eu_mdr_2017_745;fda_lifecycle_draft_2025,15,Whole template covers EU AI Act Art. 11 / EU MDR Art. 10(4).
+TemplateForm,All 7 sections,Schema,eu_ai_act_2024_1689,2,SMART model card itself is a template form.
+TrainingDataDescription,Section 3,Schema,eu_ai_act_2024_1689,1,Data Provenance / OMOP concepts.
+TransparencyInformation,Sections 1-2,Schema,eu_ai_act_2024_1689;eu_mdr_2017_745;fda_lifecycle_draft_2025;fda_pccp_guidance_2024,17,Identification + Intended Use exports.
+Unknown_Artefact,,,eu_ai_act_2024_1689;eu_mdr_2017_745;fda_ai_ml_action_plan_2021;fda_lifecycle_draft_2025;fda_pccp_guidance_2024;tripod_ai_2024,41,
+VersionLog,N/A,Lifecycle+Chain,fda_lifecycle_draft_2025;fda_pccp_guidance_2024,2,On-chain version registry.

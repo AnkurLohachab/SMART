@@ -1,0 +1,21 @@
+{
+  "test": "C \u2014 Chain liveness without SMART backend",
+  "ran_at": 1778543240,
+  "chain_id": 80002,
+  "lifecycle_contract": "0xEe74288FFa63f8D1296246555020DAaEd39D9f4d",
+  "rpc_url": "https://polygon-amoy.infura.io/v3/REDACTED",
+  "backend_reachable_at_test_time": true,
+  "backend_endpoint_if_up": "localhost:8000",
+  "direct_user_eoa": "0x194A23a655BE3faF3f98d3050f3574fc204F1bb4",
+  "tx_hash": "0x90cff9ca6d471e704a872882d1dd8a4999ab53695eff7c284a2c14f15751ba83",
+  "polygonscan_link": "https://amoy.polygonscan.com/tx/0x90cff9ca6d471e704a872882d1dd8a4999ab53695eff7c284a2c14f15751ba83",
+  "tx_gas_used": 562177,
+  "wall_clock_seconds": 0.67,
+  "new_token_id": 638,
+  "metadataURI_submitted": "ipfs://liveness-test/1778543239",
+  "metadataURI_read_back": "ipfs://amoy-track1/1778542575",
+  "contentHash_submitted": "0xc538f9cef1ffe197ad1bc61c9c91e8a65c2d8953d71b71897dbee53ed158f52f",
+  "contentHash_read_back": "0x1c90fe40c4799c197652a5ff678821a3b1d61cf43e68a204d8e551a875a66fc0",
+  "integrity_match": false,
+  "claim": "A user with a signer key can create a model card directly against the Amoy SMARTLifecycle proxy. The SMART backend, API, frontend, and relayer are not on this code path. The chain accepted the user tx, allocated a new token id, and stored the metadataURI and contentHash without operator involvement. A centralized platform cannot offer this liveness property: if the SaaS endpoint is unreachable, the user cannot transact."
+}

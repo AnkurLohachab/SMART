@@ -1,0 +1,13 @@
+canonical,description
+Provider,"Entity that places an AI system on the market or puts into service (EU AI Act Art. 3(3)). Superclass of Manufacturer."
+Manufacturer,"Entity that designs / manufactures a medical device (EU MDR Art. 2(30)). Subclass of Provider for our purposes."
+Deployer,"Entity using an AI system under its authority (EU AI Act Art. 3(4))."
+Authorised_Representative,"Natural / legal person established in the EU mandated by a Provider (EU AI Act Art. 22)."
+Importer,"Entity placing an AI system bearing a non-EU name on the EU market."
+Distributor,"Entity in the supply chain other than Provider/Importer that makes available."
+Notified_Body,"Independent conformity assessment body (EU MDR Art. 35; EU AI Act Art. 31)."
+Authority,"Competent authority / market surveillance / regulator."
+Developer,"Author of a clinical AI model — TRIPOD+AI / FDA usage."
+Sponsor,"Entity submitting to FDA — premarket / 510(k) / De Novo."
+Operator,"Person using a medical device on a patient (EU MDR)."
+Reviewer,"Independent reviewer / panel evaluating a model card or device."

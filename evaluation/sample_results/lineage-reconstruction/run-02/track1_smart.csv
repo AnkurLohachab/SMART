@@ -1,0 +1,4 @@
+attack_id,attack_name,system,attempt_prevented,history_intact,detail
+T1,audit-trail deletion,SMART,True,True,no admin mutator found (0 candidates); 4 records stable
+T2,retroactive claim modification,SMART,True,True,action.claimRef before=e86af6fa3c6e1d5e... after=e86af6fa3c6e1d5e... ; live snapshot moved e86af6fa3c6e1d5e... -> ad94cf8483a791e6...
+T3,forged deprecation,SMART,True,True,"reverted with {'code': -32603, 'message': ""Error: VM Exception while processing transaction: r; no Deprecated logs emitted"

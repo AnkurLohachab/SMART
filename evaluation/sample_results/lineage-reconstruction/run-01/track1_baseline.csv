@@ -1,0 +1,4 @@
+attack_id,attack_name,system,attempt_prevented,history_intact,detail
+T1,audit-trail deletion,centralised_baseline,False,False,admin DELETE removed 3 -> 0 rows
+T2,retroactive claim modification,centralised_baseline,False,False,row id=4 after_json overwritten
+T3,forged deprecation,centralised_baseline,False,False,injected 1 forged Deprecated row(s)

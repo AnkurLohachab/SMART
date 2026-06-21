@@ -1,0 +1,7 @@
+extractor_a,extractor_b,n_a,n_b,n_intersect,n_union,kappa
+deepinfra[Qwen/Qwen2.5-72B-Instruct],deepinfra[meta-llama/Llama-3.3-70B-Instruct-Turbo],307,351,238,420,0.0014
+deepinfra[Qwen/Qwen2.5-72B-Instruct],deepinfra[openai/gpt-oss-120b],307,34,26,315,0.0201
+deepinfra[Qwen/Qwen2.5-72B-Instruct],regex-baseline-v2[Mandatory],307,158,101,364,-0.0485
+deepinfra[meta-llama/Llama-3.3-70B-Instruct-Turbo],deepinfra[openai/gpt-oss-120b],351,34,32,353,0.034
+deepinfra[meta-llama/Llama-3.3-70B-Instruct-Turbo],regex-baseline-v2[Mandatory],351,158,108,401,-0.1092
+deepinfra[openai/gpt-oss-120b],regex-baseline-v2[Mandatory],34,158,5,187,-0.0815

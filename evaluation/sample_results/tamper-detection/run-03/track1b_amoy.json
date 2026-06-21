@@ -1,0 +1,64 @@
+{
+  "chain_id": 80002,
+  "lifecycle": "0xEe74288FFa63f8D1296246555020DAaEd39D9f4d",
+  "sbt": "0xc02feb491f2519200e27D49A5B075F12a9d12FD1",
+  "deployer": "0x3caC9DD536810260ab5F0678e257a18A54074a66",
+  "target_lifecycle_token": 637,
+  "results": [
+    {
+      "attack_id": "A1",
+      "attack_name": "soulbound bypass via approve+transferFrom",
+      "attempt_prevented": true,
+      "forensically_detectable": true,
+      "detail": "approve tx ok=False; transferFrom reverted with 'execution reverted: SMARTLifecycle: Soulbound tokens cannot be transferred'",
+      "tx_hashes": [
+        "163347936453f78f9d18be4a8c995534f2a220526500e852a50464bf30535560",
+        "22cc7ed759737d758444ef32eb76f6295b026650a55c6be5099caba75518814d"
+      ]
+    },
+    {
+      "attack_id": "A2",
+      "attack_name": "soulbound bypass via setApprovalForAll",
+      "attempt_prevented": true,
+      "forensically_detectable": true,
+      "detail": "setApprovalForAll tx ok=False; transferFrom reverted with 'execution reverted: SMARTLifecycle: Soulbound tokens cannot be transferred'",
+      "tx_hashes": [
+        "d6622503c1c923798c2bd3c801e6163814b9ed152d883082672f203b4f7d9d15",
+        "29495cf4d54b156c10a2f7863d494dbe6c30c6b0222e99433c254f2d612925c3"
+      ]
+    },
+    {
+      "attack_id": "A3",
+      "attack_name": "direct SBT burn to erase",
+      "attempt_prevented": false,
+      "forensically_detectable": true,
+      "detail": "burn(sbt=3) reverted with ''",
+      "tx_hashes": [
+        "05d4d5056bc5df0b5dde419e438064da89a1bfdb4e0aa86f66f2496ac1520a48"
+      ]
+    },
+    {
+      "attack_id": "A4",
+      "attack_name": "direct SBT mint bypassing lifecycle",
+      "attempt_prevented": false,
+      "forensically_detectable": true,
+      "detail": "deployer.hasRole(MINTER)=True; mint reverted=False: ''",
+      "tx_hashes": [
+        "d03fd2b186641efe46f0832fc2bb71c29a067329d1d56d808089bbdecfd1c38b"
+      ]
+    },
+    {
+      "attack_id": "A5",
+      "attack_name": "privilege escalation trail",
+      "attempt_prevented": false,
+      "forensically_detectable": true,
+      "detail": "grant ok=True, forge ok=True, revoke ok=True; RoleGranted event in grant tx: False; RoleRevoked event in revoke tx: False; forgery succeeded but trail is publicly inspectable on PolygonScan.",
+      "tx_hashes": [
+        "aad0a8fde0f394b4f653ed050e92f992652958710318cc667734240ab8c2351c",
+        "d1802a9061b2d32fee0b8fe4f8b96422596df39eb7c5c903f7fed0f4234c2809",
+        "510c8389a22efe930aeee0cbeb75de37d6266bfafa44d91cf93fdafb581bc0d9"
+      ]
+    }
+  ],
+  "ran_at": 1778542961
+}
