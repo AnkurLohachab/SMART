@@ -1,5 +1,7 @@
 # SMART
 
+[![DOI](https://zenodo.org/badge/1276008767.svg)](https://doi.org/10.5281/zenodo.20784735)
+
 Reference implementation of **SMART** - *Structured, Meaningful, Auditable, Responsible, and Transparent* - a framework for documenting clinical AI, described in the accompanying research paper.
 
 SMART has three parts:
@@ -151,7 +153,7 @@ MIT - see [LICENSE](LICENSE).
 
 ## Citation
 
-If you use this work, please cite the accompanying paper (citation to be added on acceptance).
+If you use this work, please cite the accompanying paper (citation to be added on acceptance) and the archived release: https://doi.org/10.5281/zenodo.20784735.
 
 ## Note
 
