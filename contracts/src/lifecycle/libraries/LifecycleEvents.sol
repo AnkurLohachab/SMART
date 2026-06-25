@@ -39,6 +39,14 @@ library LifecycleEvents {
         uint256 timestamp
     );
 
+    event HTAAttested(
+        uint256 indexed tokenId,
+        address indexed assessor,
+        uint8 verdict,
+        bytes32 reportHash,
+        uint256 timestamp
+    );
+
     event ModelCardRevised(
         uint256 indexed tokenId,
         address indexed revisor,

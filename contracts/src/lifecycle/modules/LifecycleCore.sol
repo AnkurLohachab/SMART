@@ -225,6 +225,16 @@ contract LifecycleCore {
         emit LifecycleEvents.ModelCardDeprecated(tokenId, actor, reason, block.timestamp);
     }
 
+    function attestHTA(uint256 tokenId, uint8 verdict, bytes32 reportHash) external {
+        LibAccessControl.checkRole(LibAccessControl.HTA_ASSESSOR_ROLE);
+        require(reportHash != bytes32(0), "Report hash required");
+        LibLifecycleStorage.Layout storage l = LibLifecycleStorage.layout();
+        LibLifecycleStorage.ModelCard storage card = l.modelCards[tokenId];
+        require(card.isActive, "Model card not active");
+        require(card.status == LibLifecycleStorage.Status.Published, "Card not published");
+        emit LifecycleEvents.HTAAttested(tokenId, msg.sender, verdict, reportHash, block.timestamp);
+    }
+
     function _safeMint(address to, uint256 tokenId) private {
         require(to != address(0), "ERC721: mint to the zero address");
         LibLifecycleStorage.Layout storage l = LibLifecycleStorage.layout();
