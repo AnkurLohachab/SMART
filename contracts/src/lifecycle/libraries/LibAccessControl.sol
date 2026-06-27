@@ -10,6 +10,7 @@ library LibAccessControl {
     bytes32 internal constant PUBLISHER_ROLE = keccak256("PUBLISHER_ROLE");
     bytes32 internal constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
     bytes32 internal constant IDENTITY_ARBITER_ROLE = keccak256("IDENTITY_ARBITER_ROLE");
+    bytes32 internal constant HTA_ASSESSOR_ROLE = keccak256("HTA_ASSESSOR_ROLE");
 
     event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender);
     event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender);
